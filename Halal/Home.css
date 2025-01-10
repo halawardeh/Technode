@@ -92,15 +92,20 @@ h3 {
     height: 50%;
 }
 
-
+/* 
 .card {
     border-radius: 7px;
     background-color: #ffffff;
     border: 2px solid #999999;
     box-shadow: 0px 4px 4px #E07B39;
+} */
+
+.text-success{
+    color: #1E1E1E;
 }
-
-
+.card-img-top{
+    height: 40%;
+}
 
 .cards {
     display: flex;
@@ -148,6 +153,95 @@ display: flex;
 
 
 
+
+
+
+
+
+
+
+body {
+    background: #eee;
+    margin-top: 20px;
+}
+
+.hori-timeline .events {
+    border-top: 3px solid green;
+}
+
+.hori-timeline .events 
+.event-list {
+    display: block;
+    position: relative;
+    text-align: center;
+    margin-right: 0;
+}
+
+.hori-timeline .events 
+.event-list:before {
+    content: "";
+    position: absolute;
+    height: 36px;
+    border-right: 2px dashed #2ddf36;
+    top: 0;
+}
+
+.hori-timeline .events .event-list 
+.event-date {
+    position: absolute;
+    top: 38px;
+    left: 0;
+    right: 0;
+    width: 75px;
+    margin: 0 auto;
+    border-radius: 4px;
+    padding: 2px 4px;
+}
+
+
+@media (min-width: 1140px) {
+    .hori-timeline .events 
+    .event-list {
+        display: inline-block;
+        width: 24%;
+        padding-top: 45px;
+    }
+
+    .hori-timeline .events 
+    .event-list .event-date {
+        top: -12px;
+    }
+}
+
+.card {
+    border: none;
+    margin-bottom: 24px;
+    box-shadow: 0 0 13px 0 rgba(236, 236, 241, 0.44);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 426px) {
 
     .log_sign_buttons {
@@ -171,10 +265,7 @@ display: flex;
     .first_page{
         display: contents;
     }
-    .courses {
-        display: contents;
-        
-    }
+  
     img, svg {
        
         width: 95%;
