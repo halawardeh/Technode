@@ -1,0 +1,125 @@
+body {
+
+    padding: 0;
+    margin: 0;
+
+}
+
+input {
+
+    padding: 7px;
+    border-radius: 7px;
+    border-style: none;
+    border: 1px solid rgb(167, 167, 167);
+    width: 30%;
+}
+
+.Main-Images {
+    display: flex;
+    width: 70%;
+    margin: auto 170px;
+    margin-top: 100px;
+    box-shadow: 2px 0px 6px 2px rgba(0, 0, 0, 0.30);
+    background-color: #f5f5dca7;
+}
+
+.Block-Image {
+
+    width: 30%;
+    border: 1px solid black;
+    margin-right: 15px;
+    padding: 12px;
+}
+
+.Image-2 {
+
+    text-align: center;
+}
+
+#Image-2 {
+
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.Text-Image {
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.Form-1 {
+
+    width: 69%;
+    border: 1px solid black;
+    padding: 12px;
+    position: relative;
+}
+
+.btn-3 {
+
+    text-align: center;
+    margin-top: 30px;
+}
+
+#FName {
+
+    width: 250px;
+    margin-left: 40px;
+}
+
+#LName {
+
+    width: 250px;
+    margin-left: 20px;
+}
+
+#Email {
+
+    width: 525px;
+    margin-left: 40px;
+}
+
+#Password {
+
+    width: 525px;
+    margin-left: 40px;
+}
+
+#date1 {
+
+    width: 525px;
+    margin-left: 40px;
+}
+
+.Gender {
+
+    margin-left: 20px;
+}
+
+.SaveChange {
+
+   position: relative;
+   left: 40%;
+   margin-top: 20px;
+}
+
+#button-Form {
+
+    background-color: #B6A28E !important;
+    border-style: none !important;
+}
+
+#button-Form:hover {
+
+    background-color: #978068 !important;
+   
+}
+
+.Text-Image {
+
+    margin-top: 30px;
+    color: rgb(159, 159, 159);
+}
