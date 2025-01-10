@@ -1,0 +1,183 @@
+button {
+    border: 2px solid #999999;
+    border-radius: 7px;
+    background-color: #E07B39;
+    color: white;
+}
+
+body {
+    background-color: #D9D9D9;
+}
+
+h1,
+h3 {
+    text-align: center;
+}
+
+.account {
+    display: none;
+}
+
+.log_sign_buttons {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    color: black;
+    font-size: 22px;
+}
+
+.log_in_button {
+    background-color: #F1F1F1 !important;
+    color: #E07B39 !important;
+    border: 2px solid #E07B39 !important;
+
+}
+
+.sign_up_button {
+    background-color: #E07B39 !important;
+    color: #F1F1F1 !important;
+    border: 2px solid #B6A28E !important;
+}
+
+
+.orange {
+    color: #E07B39;
+    font-weight: bold;
+}
+
+.welcome {
+    font-size: 200%;
+    align-content: center;
+    text-align: center;
+
+}
+
+
+.first_page {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    border-radius: 7px;
+    background-color: #ffffff;
+    border: 5px solid #999999;
+    box-shadow: 0px 4px 4px #E07B39;
+    width: 100%;
+    align-items: center;
+
+
+}
+
+.first_page1 {
+
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+.secound_page {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    border-radius: 7px;
+}
+
+
+#sec_img {
+    width: 50%;
+    height: 50%;
+}
+
+
+.card {
+    border-radius: 7px;
+    background-color: #ffffff;
+    border: 2px solid #999999;
+    box-shadow: 0px 4px 4px #E07B39;
+}
+
+
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 10%;
+}
+
+.apply_test {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* .third_page3 {} */
+
+.courses {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .couse_img {} */
+
+
+.skills_cards{
+display: flex;
+
+
+}
+
+
+.skills_card{
+    background-color: #999999;
+    border: 1px sold #1E1E1E;
+    border-radius: 7px;
+    box-shadow: 3px 6px 6px #1E1E1E;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 426px) {
+
+    .log_sign_buttons {
+        /*        
+        position: absolute;
+        left: 60%;
+        top: 60%; */
+        display: none;
+
+    }
+
+    #logo_nav {
+        display: none;
+    }
+
+    /* .container-fluid {
+        display: flex; 
+        flex-wrap: nowrap !important;
+    } */
+
+    .first_page{
+        display: contents;
+    }
+    .courses {
+        display: contents;
+        
+    }
+    img, svg {
+       
+        width: 95%;
+    }
+    
+}
