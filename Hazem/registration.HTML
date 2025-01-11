@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <!-- ربط ملف CSS -->
+    <link rel="stylesheet" href="registration.css">
+</head>
+
+<body>
+    <section class="container">
+        <header>Registration Form</header>
+        <form class="form" action="#" id="registrationForm">
+            <div class="input-box">
+                <label for="fullName">Full Name</label>
+                <input id="fullName" required placeholder="Enter full name" type="text">
+            </div>
+            <div class="column">
+                <div class="input-box">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input id="phoneNumber" required placeholder="Enter phone number" type="tel">
+                </div>
+                <div class="input-box">
+                    <label for="birthDate">Birth Date</label>
+                    <input id="birthDate" required placeholder="Enter birth date" type="date">
+                </div>
+            </div>
+            <div class="gender-box">
+                <label>Gender</label>
+                <div class="gender-option">
+                    <div class="gender">
+                        <input checked name="gender" id="check-male" type="radio">
+                        <label for="check-male">Male</label>
+                    </div>
+                    <div class="gender">
+                        <input name="gender" id="check-female" type="radio">
+                        <label for="check-female">Female</label>
+                    </div>
+                </div>
+            </div>
+            <div class="input-box address">
+                <label for="address">Address</label>
+                <input id="address" required placeholder="Enter street address" type="text">
+                <div class="column">
+                    <div class="select-box">
+                        <select id="country">
+                            <option hidden>Country</option>
+                            <option>Amman</option>
+                            <option>Ajlun</option>
+                            <option>Irbid</option>
+                            <option>Az Zarqa</option>
+                        </select>
+                    </div>
+                    <input id="city" required placeholder="Enter your city" type="text">
+                </div>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- ربط ملف JavaScript -->
+    <script src="registration.js"></script>
+</body>
+
+</html>
