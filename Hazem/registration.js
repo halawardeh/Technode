@@ -26,5 +26,4 @@ document.querySelector("#registrationForm").addEventListener("submit", function 
         return;
     }
 
-    // يمكنك إضافة المزيد من التحقق هنا حسب الحاجة
 });
