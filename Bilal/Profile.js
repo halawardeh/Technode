@@ -9,7 +9,11 @@ let City = document.getElementById("City");
 let Male = document.getElementById("Male");
 let Female = document.getElementById("Female");
 
-
+let ErrorFName = document.getElementById('Error-FName');
+let ErrorLName = document.getElementById('Error-LName');
+let ErrorEmail = document.getElementById("Valid_Email");
+let ErrorPassword = document.getElementById("Valid_Password");
+let ErrorCity = document.getElementById('Valid_City');
 
 let Overlay = document.getElementById('overlay');
 
@@ -17,7 +21,71 @@ let popupButton = document.getElementById('button-Form');
 
 let popupMenu = document.getElementById('Form');
 
+let IsValidName;
 
+
+
+
+function IsValid() {
+
+    if (!Edit_FName.value.match(/^[a-zA-Z]+$/)) {
+        ErrorFName.innerHTML = 'Please enter a valid First Name';
+        return false;
+    }
+    else {
+        ErrorFName.innerHTML = '';
+        return true;
+    }
+}
+
+
+function IsValid2() {
+
+    if (!Edit_LName.value.match(/^[a-zA-Z]+$/)) {
+        ErrorLName.innerHTML = 'Please enter a valid Last Name';
+        return false;
+    }
+    else {
+        ErrorLName.innerHTML = '';
+        return true;
+    }
+}
+
+function IsValid3() {
+
+    if (!Edit_Email.value.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)) {
+        ErrorEmail.innerHTML = 'Please enter a valid email';
+        return false;
+    }
+    else {
+        ErrorEmail.innerHTML = '';
+        return true;
+    }
+}
+
+function IsValid4() {
+
+    if (!Edit_Password.value.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)) {
+        ErrorPassword.innerHTML = 'Please enter a valid Password';
+        return false;
+    }
+    else {
+        ErrorPassword.innerHTML = '';
+        return true;
+    }
+}
+
+function IsValid5() {
+
+    if (!Edit_City.value.match(/^[a-zA-Z]+$/)) {
+        ErrorCity.innerHTML = 'Please enter a valid Last Name';
+        return false;
+    }
+    else {
+        ErrorCity.innerHTML = '';
+        return true;
+    }
+}
 
 let Edit_FName = document.getElementById("Edit-Fname");
 let Edit_LName = document.getElementById("Edit-Lname");
@@ -35,7 +103,7 @@ let ImagePro = document.getElementById('Image-Profile');
 let PathImage;
 
 function showImage() {
-    debugger
+
     const file = document.getElementById("image").files[0];
     if (file) {
         const reader = new FileReader();
@@ -43,12 +111,20 @@ function showImage() {
             const img = document.getElementById('Image-Profile');
             img.src = reader.result;
             img.width = 100;
-            PathImage = reader.result;
+            localStorage.setItem('imageProfileURL', reader.result);
         };
         reader.readAsDataURL(file);
     }
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    const savedImage = localStorage.getItem('imageProfileURL');
+    const img = document.getElementById('Image-Profile');
+    if (savedImage) {
+        img.src = savedImage;
+        img.style.display = 'block';
+    }
+});
 
 
 popupButton.addEventListener("click", function () {
@@ -120,19 +196,29 @@ Save_Change.addEventListener('click', function (event) {
         localStorage.setItem('Gender', "Female");
     }
 
-    window.alert("Data has been saved successfully");
+
+    if (IsValid() == false || IsValid2() == false || IsValid3() == false || IsValid4() == false || IsValid5() == false) {
+        window.alert('There is an invalid field');
+        return;
+    } else {
+        window.alert("Data has been saved successfully");
+         
+       
+
+        localStorage.setItem('Fname', Edit_FName.value);
+        localStorage.setItem('Lname', Edit_LName.value);
+        localStorage.setItem('Email', Edit_Email.value);
+        localStorage.setItem('Password', Edit_Password.value);
+        localStorage.setItem('City', Edit_City.value);
+        localStorage.setItem('Birth_Date', Edit_Date.value);
+
+        popupMenu.style.display = "none";
+        Overlay.style.display = "none";
+
+    }
 
 
-    localStorage.setItem('Fname', FName.value);
-    localStorage.setItem('Lname', LName.value);
-    localStorage.setItem('Email', Email.value);
-    localStorage.setItem('Password', Password.value);
-    localStorage.setItem('City', City.value);
-    localStorage.setItem('Birth_Date', Birth_Date.value);
-    localStorage.setItem('Path',PathImage);
 
-    popupMenu.style.display = "none";
-    Overlay.style.display = "none";
 
 })
 
@@ -142,8 +228,8 @@ window.onload = function () {
     FName.value = localStorage.getItem('Fname');
     LName.value = localStorage.getItem('Lname');
     Email.value = localStorage.getItem('Email');
-    Password.value = localStorage.getItem('City');
-    City.value = localStorage.getItem('Password');
+    Password.value = localStorage.getItem('Password');
+    City.value = localStorage.getItem('City');
     Birth_Date.value = localStorage.getItem('Birth_Date');
 
     if (localStorage.getItem('Gender') == "Male") {
@@ -153,5 +239,4 @@ window.onload = function () {
         Female.checked = true;
     }
 
-    ImagePro.src = localStorage.getItem('Path');
 }
