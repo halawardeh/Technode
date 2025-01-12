@@ -31,13 +31,83 @@
             <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
           </div> -->
           <!-- <span>or use email for registeration</span> -->
-          <input type="text" placeholder="Name" id="username">
-          <input type="text" placeholder="Email" id="email">
-          <input type="password" placeholder="Password" id="password">
+          <!-- <input type="text" placeholder="Name" id="username"> -->
+
+          
+       
+          <input id="firstName" required placeholder="Enter firstName" type="text" onkeyup="namevalidation()">
+          <span id="fncheck"></span>
+    
+          <input id="lastName" required placeholder="Enter LastName" type="text">
+          <span id="lncheck"></span>
+      
+
+          <input id="birthDate" required placeholder="Enter birth date" type="date" >
+          <span id="dcheck"></span>
+
+
+          <input type="text" placeholder="Email" id="email" onkeyup="emailvalidation()">
+          <span id="emailcheck"></span>
+
+          
+          <input id="phoneNumber" required placeholder="Enter phone number" type="tel" onkeyup=" checkphone()">
+          <span id="phonecheck"></span>
+
+          
+
+        
+        
+                <div class="gender-option">
+                   <label>Gender</label>
+                    <div class="gender">
+                        <input checked name="gender" id="check-male" type="radio">
+                        <label for="check-male">Male</label>
+                    </div>
+
+                    <div class="gender">
+                        <input name="gender" id="check-female" type="radio">
+                        <label for="check-female">Female</label>
+                    </div>
+                </div>
+       
+
+          <div class="input-box address">
+              <!-- <label for="address">Email</label>
+              <input id="address" required placeholder="Enter your email " type="text"> -->
+              <div class="column">
+                    <div class="select-box">
+                          <select id="country">
+                              <option hidden>Country</option>
+                              <option>Amman</option>
+                              <option>Ajlun</option>
+                              <option>Irbid</option>
+                              <option>Az Zarqa</option>
+                          </select>
+                    </div>
+                    <input id="city" required placeholder="Enter your city" type="text">
+                </div>
+            </div>
+
+
+            <input type="password" placeholder="Password" id="password" onkeyup="passwordvalidation()">
+            <span id="passcheck"></span>
+
+            <input type="text" id="cpassword" placeholder="Confirm Psssword" onkeyup="confirmpassword()">
+            <span id="cpasscheck"></span><br>
+
           <!-- <button>Sign Up</button> -->
           <input type="submit" id="signbutton" value="Signup">
         </form>
       </div>
+
+
+
+
+
+
+
+
+
       <div class="sign-in">
 
         <form onsubmit="login(event)">
@@ -49,6 +119,11 @@
             <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
           </div> -->
           <!-- <span>or use email password</span> -->
+
+          
+        
+
+
           <input type="text" placeholder="Email" id="email">
           <input type="password" placeholder="Password" id="password">
           <p id="fncheck"></p><br>
@@ -77,6 +152,6 @@
         </div>
       </div>
     </div>
-    <script src="login.js"></script>
+    <script src="log.js"></script>
   </body>
 </html>
