@@ -24,12 +24,16 @@ h3 {
     display: none;
 }
 
-
+#logo {
+    width: 15vw;
+    height: 3vw;
+}
 
 #apply_test {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: medium;
 }
 
 .orange {
@@ -45,13 +49,26 @@ h3 {
     color: #212529;
 }
 
+.description {
+    color: #ffffff;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    background-color: #343a40 !important;
+}
 
-.jumbotron {
-    background-color: #cccccc;
-    color: #000;
-  }
 
-  .first_page {
+.jumbotron1 {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background-color: #343a40;
+    opacity: .75;
+}
+
+
+.first_page {
+    background-image: url(images/first_home_image.png);
     position: relative;
     display: flex;
     flex-wrap: nowrap;
@@ -63,7 +80,11 @@ h3 {
     /* align-content: center; */
     /* align-items: center; */
     /* flex-direction: row; */
+    width: 100vw;
+    height: 20vw;
 }
+
+
 
 .first_page1 {
 
@@ -109,13 +130,14 @@ h3 {
 .apply_test {
     display: inline-block;
     vertical-align: middle;
+    width: 10vw;
 }
 
 
 
 .courses {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 
@@ -187,7 +209,19 @@ h3 {
     border: none;
     margin: 0% 2%;
 
+    box-shadow: 0px 4px 8px #ffffffeb;
+}
+
+.card1 {
+    border: none;
+    margin: 0% 2%;
+    width: 20vw;
     box-shadow: 0px 4px 8px #ffffff;
+    height: 10vw;
+}
+
+.card-img-overlay p {
+    font-size: initial !important;
 }
 
 .tests {
@@ -201,8 +235,12 @@ h3 {
 }
 
 .card-img-overlay {
-    position: relative;
-
+    position: relative !important;
+    /* top: 0; */
+    /* right: 0; */
+    /* bottom: 0; */
+    /* left: 0; */
+    padding: 1.25rem;
 }
 
 .img-fluid1 {
@@ -215,34 +253,75 @@ h3 {
 .card-title,
 .card-text {
     text-align: center;
+   
+}
+
+#Journey{
+    background-color: #999999;
+}
+
+/* .container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+    max-width: 100%;
+} */
+
+.JourneyImages{
+    width: 10vw !important;
+    height: 6vw !important;
+}
+
+.carousel-inner img {
+    /* -webkit-filter: grayscale(90%); */
+    width: 100% !important;
+    height: 75% !important;
+    /* height: 50%; */
+    /* height: auto; */
+    margin: auto;
+    opacity: .65;
 }
 
 
-
-
-  .carousel-inner img {
+.carousel-inner img {
     /* -webkit-filter: grayscale(90%); */
-    
-    width: 50%; /* Set width to 100% */
+
+    width: 50%;
+    /* Set width to 100% */
     /* height: 50%; */
     height: auto;
     margin: auto;
-  }
-  
-  .carousel-caption h3 {
+}
+
+.carousel-caption h3 {
     color: #fff !important;
-  }
-  
-  @media (max-width: 600px) {
+}
+
+@media (max-width: 600px) {
     .carousel-caption {
-      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+        display: none;
+        /* Hide the carousel text when the screen is less than 600 pixels wide */
     }
-  }
 
+}
 
-  
+@media (min-width: 600px) {
 
+    .navbar-expand-md .navbar-collapse {
+        display: -ms-flexbox !important;
+        display: flex !important;
+        -ms-flex-preferred-size: auto;
+        /* flex-basis: auto; */
+        font-size: 185%;
+        justify-content: center;
+    }
+}
 
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 100vw !important;
+}
 
 @media only screen and (max-width: 426px) {
 
@@ -268,4 +347,36 @@ h3 {
         color: white;
     }
 
+    #logo {
+        width: 45vw;
+        height: 11vw;
+    }
+
+    .world {
+        margin-top: 15vw;
+    }
+
+    .courses {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        margin-top: 3vw;
+        
+
+    }
+
+    .hori-timeline .events .event-list:before {
+        border-right: 2px  #2ddf36;
+    }
+
+    .card1 {  
+        width: 27vw;
+        height: 75vw;
+    }
+    .apply_test {
+ 
+        width: 30vw;
+    }
 }
