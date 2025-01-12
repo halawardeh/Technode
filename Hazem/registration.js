@@ -1,29 +1,50 @@
 document.querySelector("#registrationForm").addEventListener("submit", function (event) {
-    // التحقق من إدخال الاسم (لازم يحتوي على أحرف كبيرة وصغيرة بس)
+    event.preventDefault(); 
+
+    // استحضار  القيم من الحقول
     const fullName = document.querySelector("#fullName").value;
-    const namePattern = /^[A-Za-z\s]+$/; // يسمح بس بالأحرف الكبيرة والصغيرة والمسافات
+    const phoneNumber = document.querySelector("#phoneNumber").value;
+    const birthDate = document.querySelector("#birthDate").value;
+    const gender = document.querySelector('input[name="gender"]:checked').nextElementSibling.textContent;
+    const address = document.querySelector("#address").value;
+    const country = document.querySelector("#country").value;
+    const city = document.querySelector("#city").value;
+
+    // تاكد من صحة البيانات
+    const namePattern = /^[A-Za-z\s]+$/; // فقط أحرف ومسافات
     if (!namePattern.test(fullName)) {
         alert("Please enter a valid name (only letters and spaces are allowed).");
-        event.preventDefault(); // إيقاف إرسال النموذج إذا كانت الحقول فارغة أو غير صحيحة
-        return; // التوقف عن متابعة التحقق
+        return;
     }
 
-    // التحقق من إدخال رقم الهاتف (يجب أن يحتوي على أرقام فقط)
-    const phoneNumber = document.querySelector("#phoneNumber").value;
-    const phonePattern = /^[0-9]+$/; // يسمح فقط بالأرقام
+    const phonePattern = /^[0-9]+$/; // فقط أرقام
     if (!phonePattern.test(phoneNumber)) {
         alert("Please enter a valid phone number (only numbers are allowed).");
-        event.preventDefault(); // إيقاف إرسال النموذج إذا كانت الحقول فارغة أو غير صحيحة
         return;
     }
 
-    // التحقق من إدخال تاريخ الميلاد (يجب أن يكون بتنسيق YYYY-MM-DD)
-    const birthDate = document.querySelector("#birthDate").value;
-    const birthDatePattern = /^\d{4}-\d{2}-\d{2}$/; // يغة التاريخ يجب أن تكون yyyy-mm-dd
+    const birthDatePattern = /^\d{4}-\d{2}-\d{2}$/; // صيغة التاريخ
     if (!birthDatePattern.test(birthDate)) {
         alert("Please enter a valid birth date (format: YYYY-MM-DD).");
-        event.preventDefault(); // إيقاف إرسال النموذج إذا كانت الحقول فارغة أو غير صحيحة
         return;
     }
 
+    // تخزين البيانات في Local Storage
+    const userData = {
+        fullName: fullName,
+        phoneNumber: phoneNumber,
+        birthDate: birthDate,
+        gender: gender,
+        address: address,
+        country: country,
+        city: city,
+    };
+
+    // تحويل object  إلى JSON وحفظه
+    localStorage.setItem("userData", JSON.stringify(userData));
+
+    alert("Data saved successfully!");
+
+    // إعادة تعيين الحقول
+    document.querySelector("#registrationForm").reset();
 });

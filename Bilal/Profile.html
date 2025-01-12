@@ -21,7 +21,7 @@
             <div class="StartProfile">
 
                 <div class="Text-Image">
-                    <div class="Img-1"><img
+                    <div class="Img-1" id="Img-1"><img
                             src="./Images/close-up-portrait-of-smiling-handsome-young-caucasian-man-face-looking-at-camera-on-isolated-light-gray-studio-background-photo.jpg"
                             alt="" id="Image-Profile">
                     </div>
@@ -31,10 +31,24 @@
                     </div>
                 </div>
 
+                <div class="container2">
+                    <div class="folder">
+                      <div class="front-side">
+                        <div class="tip"></div>
+                        <div class="cover"></div>
+                      </div>
+                      <div class="back-side cover"></div>
+                    </div>
+                    <label class="custom-file-upload">
+                      <input class="title" type="file" id="image" onchange="showImage()" />
+                      Choose a file
+                    </label>
+                  </div>
+
                 <div id="Btn-1">
 
-                    <a href="./EditProfile.html"><button type="button" class="btn btn-primary" id="button-Form">Edit Profile</button></a>
-                    
+                    <button type="button" class="btn btn-primary" id="button-Form">Edit Profile</button>
+
                 </div>
 
             </div>
@@ -47,32 +61,32 @@
                         <div class="Fill-One">
 
                             <label for="FName" class="Text_Name">First Name: </label> <br>
-                            <input type="text" id="FName" disabled value="Bilal">
+                            <input type="text" id="FName" disabled>
 
                         </div>
 
                         <div class="Fill-One">
 
                             <label for="LName" class="Text_Name">Last Name: </label> <br>
-                            <input type="text" id="LName" disabled value="Khasawneh">
+                            <input type="text" id="LName" value="Khasawneh" disabled>
                         </div>
 
                     </div>
 
                     <br> <br> <br>
 
-                    <div class="AllInput">
+                    <div class="AllInput EditMargin">
 
                         <div class="Fill-One">
 
                             <label for="Email" class="Text_Name">Email: </label> <br>
-                            <input type="email" id="Email" disabled value="belalkhasawneh97@gmail.com">
+                            <input type="email" id="Email_1" value="belalkhasawneh97@gmail.com" disabled>
 
                         </div>
 
                         <div class="Fill-One">
                             <label for="Password" class="Text_Name">Password: </label> <br>
-                            <input type="password" id="Password" disabled value="Bilal123">
+                            <input type="password" id="Password" value="Bilal123" disabled>
                         </div>
 
 
@@ -82,29 +96,38 @@
 
                     <br> <br> <br>
 
-                    <div class="AllInput">
+                    <div class="AllInput EditMargin">
 
                         <div class="Fill-1">
 
                             <label for="Date" class="Text_Name">Bairth Date: </label> <br>
-                            <input type="date" id="Date" disabled value="1997-04-04">
+                            <input type="date" id="Birth-Date" value="1997-04-04" disabled>
+
+                        </div>
+
+
+                        <div class="Fill-3">
+
+                            <label for="City" class="Text_Name">City: </label> <br>
+                            <input type="text" id="City" value="Amman" disabled>
 
                         </div>
 
                         <div class="Fill-2">
 
-                            <label for="Gender" class="Gender">Gender :</label>
 
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                                    value="option1" disabled checked>
-                                <label class="form-check-label" for="inlineRadio1">Male</label>
+                            <div class="radio-input">
+                                <label>
+                                    <input value="Male" name="value-radio" id="Male" type="radio" disabled checked />
+                                    <span>Male</span>
+                                </label>
+                                <label>
+                                    <input value="Female" name="value-radio" id="Female" type="radio" disabled />
+                                    <span>Female</span>
+                                </label>
+                                <span class="selection"></span>
                             </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                                    value="option2" disabled>
-                                <label class="form-check-label" for="inlineRadio2">Female</label>
-                            </div>
+
 
                         </div>
 
@@ -124,6 +147,58 @@
 
 
     </div>
+
+    <form class="form" id="Form">
+        <p class="title">Edit Profile</p>
+        <p class="message">You can edit your profile from here.</p>
+        <div class="flex">
+            <label>
+                <input required="" placeholder="" type="text" class="input" id="Edit-Fname">
+                <span>First Name</span>
+            </label>
+
+            <label>
+                <input required="" placeholder="" type="text" class="input" id="Edit-Lname">
+                <span>Last Name</span>
+            </label>
+        </div>
+
+        <label>
+            <input required="" placeholder="" type="email" class="input" id="Edit-Email">
+            <span>Email</span>
+        </label>
+
+        <label>
+            <input required="" placeholder="" type="password" class="input" id="Edit-Password">
+            <span>Password</span>
+        </label>
+        <label>
+            <input required="" placeholder="" type="password" class="input" id="Edit-C_Password">
+            <span>Confirm password</span>
+
+        </label>
+        <label>
+            <input required="" placeholder="" type="text" class="input" id="Edit-City">
+            <span>City</span>
+        </label>
+        <label>
+            <input required="" placeholder="" type="date" class="input" id="Edit-Date">
+        </label>
+        <div class="radio-input">
+            <label>
+                <input type="radio" id="value-1" name="value-radio" value="1" />
+                <span style="font-weight: bold;">Male</span>
+            </label>
+            <label>
+                <input type="radio" id="value-2" name="value-radio" value="2" />
+                <span style="font-weight: bold;">Female</span>
+            </label>
+            <span class="selection"></span>
+        </div>
+        <button class="submit" id="Save_Change">Save Change</button>
+    </form>
+
+    <div id="overlay" class="overlay"></div>
 
     <script src="./Profile.js"></script>
 </body>
