@@ -33,17 +33,17 @@
 
                 <div class="container2">
                     <div class="folder">
-                      <div class="front-side">
-                        <div class="tip"></div>
-                        <div class="cover"></div>
-                      </div>
-                      <div class="back-side cover"></div>
+                        <div class="front-side">
+                            <div class="tip"></div>
+                            <div class="cover"></div>
+                        </div>
+                        <div class="back-side cover"></div>
                     </div>
                     <label class="custom-file-upload">
-                      <input class="title" type="file" id="image" onchange="showImage()" />
-                      Choose a file
+                        <input class="title" type="file" id="image" onchange="showImage()" />
+                        Choose a file
                     </label>
-                  </div>
+                </div>
 
                 <div id="Btn-1">
 
@@ -62,6 +62,7 @@
 
                             <label for="FName" class="Text_Name">First Name: </label> <br>
                             <input type="text" id="FName" disabled>
+
 
                         </div>
 
@@ -153,24 +154,28 @@
         <p class="message">You can edit your profile from here.</p>
         <div class="flex">
             <label>
-                <input required="" placeholder="" type="text" class="input" id="Edit-Fname">
+                <input required="" placeholder="" type="text" class="input" id="Edit-Fname" onkeyup="IsValid()" >
                 <span>First Name</span>
+                <span id="Error-FName" class="IsValid"></span>
             </label>
 
             <label>
-                <input required="" placeholder="" type="text" class="input" id="Edit-Lname">
+                <input required="" placeholder="" type="text" class="input" id="Edit-Lname" onkeyup="IsValid2()">
                 <span>Last Name</span>
+                <span id="Error-LName" class="IsValid"></span>
             </label>
         </div>
 
         <label>
-            <input required="" placeholder="" type="email" class="input" id="Edit-Email">
+            <input required="" placeholder="" type="email" class="input" id="Edit-Email" onkeyup="IsValid3()">
             <span>Email</span>
+            <span id="Valid_Email" class="IsValid"></span>
         </label>
 
         <label>
-            <input required="" placeholder="" type="password" class="input" id="Edit-Password">
+            <input required="" placeholder="" type="password" class="input" id="Edit-Password" onkeyup="IsValid4()">
             <span>Password</span>
+            <span id="Valid_Password" class="IsValid"></span>
         </label>
         <label>
             <input required="" placeholder="" type="password" class="input" id="Edit-C_Password">
@@ -178,8 +183,9 @@
 
         </label>
         <label>
-            <input required="" placeholder="" type="text" class="input" id="Edit-City">
+            <input required="" placeholder="" type="text" class="input" id="Edit-City" onkeyup="IsValid5()">
             <span>City</span>
+            <span id="Valid_City" class="IsValid"></span>
         </label>
         <label>
             <input required="" placeholder="" type="date" class="input" id="Edit-Date">

@@ -104,8 +104,8 @@ body {
 
     #Btn-1 {
         position: absolute;
-        bottom: 363px;
-        left: 182px;
+        bottom: 434px;
+        left: 282px;
     }
 
 }
@@ -515,6 +515,18 @@ input {
     left: -160px;
 }
 
+@media screen and (max-width:426px) {
+
+    .container2 {
+
+        --folder-W: 88px;
+        --folder-H: 18px;
+        top: 161px;
+        left: -24px;
+    }
+
+}
+
 .folder {
     position: absolute;
     top: -10px;
@@ -601,6 +613,17 @@ input {
     position: relative;
 }
 
+@media screen and (max-width:426px) {
+
+    .custom-file-upload {
+
+        padding: 12px;
+        font-size: 12px;
+        background: rgb(0 0 0 / 68%);
+    }
+
+}
+
 .custom-file-upload:hover {
     background: rgba(255, 255, 255, 0.4);
 }
@@ -621,4 +644,12 @@ input {
     100% {
         transform: translateY(0px);
     }
+}
+
+
+.IsValid {
+
+    font-size: 8px;
+    color: red;
+    width: 12px;
 }
