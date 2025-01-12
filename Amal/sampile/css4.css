@@ -1,0 +1,185 @@
+
+.first{
+    width: 90vw;
+    height: 50vw;
+    /* border: 1px solid black; */
+    margin-left: 6vw;
+}
+.p1{
+    margin-top: 10vw;
+    font-size: 2vw;
+    padding-left: 2vw;
+    
+}
+.p2{
+    font-size: 2vw;
+    padding-left: 2vw;
+    margin-top: -2vw;
+}
+.img1{
+    width: 10vw;
+    height: 18vw;
+    margin-left: 45vw;
+
+}
+.card1{
+    width: 22vw;
+    height: 25vw;
+    border: 0.5px solid black;
+    border-radius: 2vw;
+    transition: all 0.5s;
+   
+}
+.card1:hover{
+    background-color: rgba(200, 201, 207, 0.725);
+    transform: scale(1.5);
+   
+
+}
+.card-img-top{
+    width: 8vw;
+    height: 12vw;
+    padding-left:7vw;
+    margin-top: 1vw;
+}
+
+.card-title{
+    font-size: 2vw;
+    margin-top: -6vw;
+    padding-top: 5vw;
+    margin-left: 6vw;
+    margin-left: 8vw;
+}
+.btn {
+    width: 8vw;
+    height: 5vw;
+    font-size: 1vw;
+    margin-top: 1vw;
+    margin-left: 2.5vw;
+    border: 0.5px solid black;
+    border-radius: 6vw;
+    background-color:rgb(27, 74, 27) ;
+    color: white;
+    cursor: pointer;
+}
+.sbtn{
+    width: 8vw;
+    height: 5vw;
+    font-size: 1vw;
+    /* margin-top: vw;
+    padding-top:vw; */
+    color: white;
+    cursor: pointer;
+    background-color: rgb(25, 179, 25);
+    border: 0.01px solid black;
+    border-radius: 6vw;
+}
+
+/* ******second card******** */
+.card2{
+    width: 22vw;
+    height: 25vw;
+    border: 0.5px solid black;
+    border-radius: 2vw;
+    transition: all 0.5s;
+
+}
+.card2:hover{
+    background-color: rgba(164, 165, 170, 0.725);
+    transform: scale(1.5);
+} 
+
+.card2-img-top{
+    width: 8vw;
+    height: 12vw;
+    padding-left:7vw;
+    margin-top: 1vw;
+}
+.card2-title{
+    font-size: 2vw;
+    margin-top: -6vw;
+    padding-top: 5vw;
+    padding-left: 0vw;
+    margin-left: 5vw;
+}
+.btn2 {
+    width: 8vw;
+    height: 5vw;
+    font-size: 1vw;
+    margin-top: 1vw;
+    margin-left: 3.5vw;
+    border: 0.5px solid black;
+    border-radius: 6vw;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+.tbtn{
+    width: 8vw;
+    height: 5vw;
+    font-size: 1vw;
+    /* margin-top: vw;
+    padding-top:vw; */
+    color: white;
+    cursor: pointer;
+    background-color: rgba(102, 102, 220, 0.395);
+    border: 0.01px solid black;
+    border-radius: 6vw;
+}
+/* *********third card******* */
+.card3{
+    width: 22vw;
+    height: 25vw;
+    border: 0.5px solid black;
+    border-radius: 2vw;
+    transition: all 0.5s;
+
+}
+.card3:hover{
+    background-color: rgba(164, 165, 170, 0.725);
+    transform: scale(1.5);
+}
+.card3-img-top{
+    width: 8vw;
+    height: 12vw;
+    padding-left:7vw;
+    margin-top: 1vw;
+}
+.card3-title{
+    font-size: 2vw;
+    margin-top: -6vw;
+    padding-top: 5vw;
+    /* margin-left: vw; */
+    /* margin-left: 4vw; */
+    margin-left: 5vw;
+}
+.btn3{
+    width: 8vw;
+    height: 5vw;
+    font-size: 1vw;
+    margin-top: 1vw;
+    margin-left: 3.5vw;
+    border: 0.5px solid black;
+    border-radius: 6vw;
+    background-color:green;
+    color: white;
+    cursor: pointer;
+}
+.fbtn{
+    width: 8vw;
+    height: 5vw;
+    font-size: 1vw;
+    /* margin-top: vw;
+    padding-top:vw; */
+    color: white;
+    cursor: pointer;
+    background-color: rgba(102, 102, 220, 0.395);
+    border: 0.01px solid black;
+    border-radius: 6vw;
+}
+/* *****flex*** */
+.fflex{
+    margin-top: 10vw;
+    display: flex;
+    justify-content: space-between;
+}

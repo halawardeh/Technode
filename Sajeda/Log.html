@@ -1,96 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="login.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet" />
-  <title>Login Page</title>
-</head>
-
-<body>
-  <div class="container" id="container">
-    <div class="sign-up">
-      <form onsubmit="signup(event)">
-        <h1>Create Account</h1>
-        <!-- <div class="icons">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Login Page</title>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="sign-up">
+        <form   onsubmit="signup(event)">
+          <h1>Create Account</h1>
+          <!-- <div class="icons">
             <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
             <a href="#" class="icon"><i class="fa-brands fa-instagram"></i></a>
             <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
             <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
           </div> -->
-        <!-- <span>or use email for registeration</span> -->
-        <!-- <input type="text" placeholder="Name" id="username"> -->
+          <!-- <span>or use email for registeration</span> -->
+          <!-- <input type="text" placeholder="Name" id="username"> -->
 
+          
+       
+          <input id="firstName" required placeholder="Enter firstName" type="text" onkeyup="namevalidation()">
+          <span id="fncheck"></span>
+    
+          <input id="lastName" required placeholder="Enter LastName" type="text">
+          <span id="lncheck"></span>
+      
 
-
-        <input id="firstName" required placeholder="Enter firstName" type="text" onkeyup="namevalidation()">
-        <span id="fncheck"></span>
-
-        <input id="lastName" required placeholder="Enter LastName" type="text">
-        <span id="lncheck"></span>
-
-
-        <input id="birthDate" required placeholder="Enter birth date" type="date">
-        <span id="dcheck"></span>
+          <input id="birthDate" required placeholder="Enter birth date" type="date" >
+          <span id="dcheck"></span>
 
 
         <input type="text" placeholder="Email" id="email" onkeyup="emailvalidation()">
         <span id="emailcheck"></span>
 
+          
+          <input id="phoneNumber" required placeholder="Enter phone number" type="tel" onkeyup=" checkphone()">
+          <span id="phonecheck"></span>
 
-        <input id="phoneNumber" required placeholder="Enter phone number" type="tel" onkeyup=" checkphone()">
-        <span id="phonecheck"></span>
+          
 
+        
+        
+                <div class="gender-option">
+                   <label>Gender</label>
+                    <div class="gender">
+                        <input checked name="gender" id="check-male" type="radio">
+                        <label for="check-male">Male</label>
+                    </div>
 
-
-
-
-        <div class="gender-option">
-          <label>Gender</label>
-          <div class="gender">
-            <input checked name="gender" id="check-male" type="radio">
-            <label for="check-male">Male</label>
-          </div>
-
-          <div class="gender">
-            <input name="gender" id="check-female" type="radio">
-            <label for="check-female">Female</label>
-          </div>
-        </div>
-
+                    <div class="gender">
+                        <input name="gender" id="check-female" type="radio">
+                        <label for="check-female">Female</label>
+                    </div>
+                </div>
+       
 
         <div class="input-box address">
           <!-- <label for="address">Email</label>
               <input id="address" required placeholder="Enter your email " type="text"> -->
-          <div class="column">
-            <div class="select-box">
-              <select id="country">
-                <option hidden>Country</option>
-                <option>Amman</option>
-                <option>Ajlun</option>
-                <option>Irbid</option>
-                <option>Az Zarqa</option>
-              </select>
+              <div class="column">
+                    <div class="select-box">
+                          <select id="country">
+                              <option hidden>Country</option>
+                              <option>Amman</option>
+                              <option>Ajlun</option>
+                              <option>Irbid</option>
+                              <option>Az Zarqa</option>
+                          </select>
+                    </div>
+                    <input id="city" required placeholder="Enter your city" type="text">
+                </div>
             </div>
-            <input id="city" required placeholder="Enter your city" type="text">
-          </div>
-        </div>
 
 
         <input type="password" placeholder="Password" id="password" onkeyup="passwordvalidation()">
         <span id="passcheck"></span>
 
-        <input type="text" id="cpassword" placeholder="Confirm Psssword" onkeyup="confirmpassword()">
-        <span id="cpasscheck"></span><br>
+            <input type="text" id="cpassword" placeholder="Confirm Psssword" onkeyup="confirmpassword()">
+            <span id="cpasscheck"></span><br>
 
         <!-- <button>Sign Up</button> -->
         <input type="submit" id="signbutton" value="Signup">
