@@ -95,9 +95,9 @@ body {
 
 .who-we-are-image {
     width: 40%;
-    /* نفس نسبة العرض للصورة الأخرى */
+    /* نفس نسبة العرض للصورة اللي قبل  */
     height: auto;
-    /* الحفاظ على التناسب */
+    /* حتى احافظ على التناسب */
     border-radius: 8px;
     object-fit: cover;
 }
