@@ -1,21 +1,73 @@
 
-.first{
+
+
+/* From Uiverse.io by eslam-hany */ 
+.card {
+    margin-top: 20vw;
+    position: relative;
     width: 90vw;
     height: 50vw;
-    /* border: 1px solid black; */
-    margin-left: 6vw;
-}
-.p1{
-    margin-top: 10vw;
-    font-size: 2vw;
-    padding-left: 2vw;
-    
-}
-.p2{
-    font-size: 2vw;
-    padding-left: 2vw;
-    margin-top: -2vw;
-}
+    background: #DCE4C9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-left: 4vw;
+  }
+  
+  /* .card::before, */
+  .card::after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #F5F5DC;
+    transition: all 0.5s;
+  }
+  
+  .card::before {
+    top: 0;
+    margin-top: 3vw;
+    margin-left: 8vw;
+    font-size: 20px;
+    width: 80vw;
+    /* right: 0; */
+    border-radius: 0 15px 0 100%;
+   
+    content:"Welcome to the IQ, English, and Technical Quiz! ";
+  }
+  
+  .card::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100%  0 15px;
+   
+  }
+  
+  .card:hover::before,
+  .card:hover:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 0.5s;
+  }
+  
+  .card:hover:after {
+        
+        content: "10 questions to test logical reasoning ,10 questions on grammar and vocabulary ,15 questions on programming and technical knowledge." ;
+       font-size: 2vw; 
+  
+  }
+
+
 .img1{
     width: 10vw;
     height: 18vw;
@@ -31,7 +83,7 @@
    
 }
 .card1:hover{
-    background-color: rgba(200, 201, 207, 0.725);
+    background-color: #e07c39b9;
     transform: scale(1.5);
    
 
@@ -58,7 +110,7 @@
     margin-left: 2.5vw;
     border: 0.5px solid black;
     border-radius: 6vw;
-    background-color:rgb(27, 74, 27) ;
+    background-color:#E07B39 ;
     color: white;
     cursor: pointer;
 }
@@ -70,7 +122,7 @@
     padding-top:vw; */
     color: white;
     cursor: pointer;
-    background-color: rgb(25, 179, 25);
+    background-color:orange;
     border: 0.01px solid black;
     border-radius: 6vw;
 }
@@ -85,7 +137,7 @@
 
 }
 .card2:hover{
-    background-color: rgba(164, 165, 170, 0.725);
+    background-color: #e07c39b9;
     transform: scale(1.5);
 } 
 
@@ -110,7 +162,7 @@
     margin-left: 3.5vw;
     border: 0.5px solid black;
     border-radius: 6vw;
-    background-color: green;
+    background-color: #E07B39 ;
     color: white;
     cursor: pointer;
 }
@@ -122,7 +174,7 @@
     padding-top:vw; */
     color: white;
     cursor: pointer;
-    background-color: rgba(102, 102, 220, 0.395);
+    background-color:orange ;
     border: 0.01px solid black;
     border-radius: 6vw;
 }
@@ -136,7 +188,7 @@
 
 }
 .card3:hover{
-    background-color: rgba(164, 165, 170, 0.725);
+    background-color: #e07c39b9;
     transform: scale(1.5);
 }
 .card3-img-top{
@@ -161,7 +213,7 @@
     margin-left: 3.5vw;
     border: 0.5px solid black;
     border-radius: 6vw;
-    background-color:green;
+    background-color:#E07B39 ;
     color: white;
     cursor: pointer;
 }
@@ -173,7 +225,7 @@
     padding-top:vw; */
     color: white;
     cursor: pointer;
-    background-color: rgba(102, 102, 220, 0.395);
+    background-color:orange;
     border: 0.01px solid black;
     border-radius: 6vw;
 }
