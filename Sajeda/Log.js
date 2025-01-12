@@ -37,26 +37,6 @@ function login(event){
 
 
 function signup(event){
-    event.preventDefault();
-
-    let name = document.getElementById("username").value;
-    localStorage.setItem("username", name);
-    
-    let email = document.getElementById("email").value;
-    localStorage.setItem("email", email);
-
-    let password = document.getElementById("password").value;
-    localStorage.setItem("password", password);
-  
-
-    let submit = document.getElementById("signbutton").value;
-    localStorage.setItem("signbutton", submit);
-   
-}
-
-
-
-function signup(event){
   event.preventDefault();
 
   let firstname = document.getElementById("firstName").value;
@@ -74,13 +54,21 @@ function signup(event){
 
   let email = document.getElementById("email").value;
   localStorage.setItem("email", email);
+  
 
-  let honeNumber = document.getElementById("honeNumber").value;
-  localStorage.setItem("honeNumber", honeNumber);
-  p
+  let city = document.getElementById("city").value;
+  localStorage.setItem("city", city);
+
+
+  let Gender = document.getElementById("Gender").value;
+  localStorage.setItem("Gender", Gender);
+
+
 
   let submit = document.getElementById("signbutton").value;
   localStorage.setItem("signbutton", submit);
+
+  
  
 }
 
@@ -91,28 +79,26 @@ function namevalidation(){
 
   let vname= document.getElementById("firstName").value;
   let nameerror= document.getElementById("fncheck");
-  let ragname= /^[a-zA-Z]$/;
+  let ragname= /^[a-zA-Z]+$/;
   if(!ragname.test(vname)){
       // nameerror.innerHTML = "Numbers are not allowed"
       // return false;
       nameerror.innerHTML = "Numbers are not allowed";
-     }
+    }
   else{
       nameerror.innerHTML = "";
-    
+     
   }
 }
-
 
 
 function lastnamevalidation(){
 
   let vlname= document.getElementById("lastName").value;
   let lnameerror= document.getElementById("lncheck");
-  let raglname= /^[a-zA-Z]$/;
+  let raglname= /^[a-zA-Z]+$/;
   if(!raglname.test(vlname)){
-      // nameerror.innerHTML = "Numbers are not allowed"
-      // return false;
+    
       lnameerror.innerHTML = "Numbers are not allowed";
     }
   else{
@@ -165,18 +151,18 @@ function confirmpassword(){
 
 
 
-function checkphone(){
-    let vphone = document.getElementById("phoneNumber").value;
-    let phoneerror = document.getElementById("phonecheck");
-    const phonePattern = /^[0-9]+$/; 
+// // function checkphone(){
+// //     let vphone = document.getElementById("phoneNumber").value;
+// //     let phoneerror = document.getElementById("phonecheck");
+// //     const phonePattern = /^[0-9]+$/; 
 
-    if(!phonePattern.test(vphone)){
-        phoneerror.innerHTML = "Please enter a valid phone number (only numbers are allowed)";
-    }
-    else{
-        phoneerror.innerHTML = "";}
+// //     if(!phonePattern.test(vphone)){
+// //         phoneerror.innerHTML = "Please enter a valid phone number (only numbers are allowed)";
+// //     }
+// //     else{
+// //         phoneerror.innerHTML = "";}
 
-}
+// }
 
 
 

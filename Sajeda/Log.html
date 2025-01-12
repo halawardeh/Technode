@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="log.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -24,75 +24,60 @@
       <div class="sign-up">
         <form   onsubmit="signup(event)">
           <h1>Create Account</h1>
-          <!-- <div class="icons">
-            <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#" class="icon"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
-            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-          </div> -->
-          <!-- <span>or use email for registeration</span> -->
-          <!-- <input type="text" placeholder="Name" id="username"> -->
-
-          
+     
        
-          <input id="firstName" required placeholder="Enter firstName" type="text" onkeyup="namevalidation()">
+          <input id="firstName" required placeholder="Enter first Name" type="text" onkeyup=" namevalidation()">
           <span id="fncheck"></span>
     
-          <input id="lastName" required placeholder="Enter LastName" type="text">
+          <input id="lastName" required placeholder="Enter Last Name" type="text" onkeyup="lastnamevalidation()">
           <span id="lncheck"></span>
       
 
-          <input id="birthDate" required placeholder="Enter birth date" type="date" >
+          <input id="birthDate" required placeholder="Enter birth date" type="date" onkeyup="bdatevalidation()">
           <span id="dcheck"></span>
 
 
           <input type="text" placeholder="Email" id="email" onkeyup="emailvalidation()">
           <span id="emailcheck"></span>
 
-          
-          <input id="phoneNumber" required placeholder="Enter phone number" type="tel" onkeyup=" checkphone()">
-          <span id="phonecheck"></span>
+       <button>
+        <div class="column">
+              <div class="select-box">
+                    <select id="Gender">
+                        <option hidden>Gender</option>
+                        <option>Male</option>
+                        <option>Femal</option>
+                    </select>
+              </div>
+              
+          </div>
+        </button>
 
-          
-
-        
-        
-                <div class="gender-option">
-                   <label>Gender</label>
-                    <div class="gender">
-                        <input checked name="gender" id="check-male" type="radio">
-                        <label for="check-male">Male</label>
-                    </div>
-
-                    <div class="gender">
-                        <input name="gender" id="check-female" type="radio">
-                        <label for="check-female">Female</label>
-                    </div>
-                </div>
-       
 
           <div class="input-box address">
               <!-- <label for="address">Email</label>
               <input id="address" required placeholder="Enter your email " type="text"> -->
+              <button>
               <div class="column">
                     <div class="select-box">
-                          <select id="country">
-                              <option hidden>Country</option>
+                          <select id="city">
+                              <option hidden>City</option>
                               <option>Amman</option>
                               <option>Ajlun</option>
                               <option>Irbid</option>
                               <option>Az Zarqa</option>
                           </select>
                     </div>
-                    <input id="city" required placeholder="Enter your city" type="text">
+                    
                 </div>
+              </button>
             </div>
 
 
             <input type="password" placeholder="Password" id="password" onkeyup="passwordvalidation()">
             <span id="passcheck"></span>
 
-            <input type="text" id="cpassword" placeholder="Confirm Psssword" onkeyup="confirmpassword()">
+            <input type="password" id="cpassword" placeholder="Confirm Psssword" onkeyup="confirmpassword()">
             <span id="cpasscheck"></span><br>
 
           <!-- <button>Sign Up</button> -->
