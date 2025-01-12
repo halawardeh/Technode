@@ -99,9 +99,7 @@ function ViewMore() {
         The Correct Answer: ${question.correct_answer}<br><br>
       `;
   
-      let R=result;
-      localStorage.setItem("save",R)
-      show.appendChild(result);
+     
     });
   
     show.style.display = "block"; // Show the 'detais' section

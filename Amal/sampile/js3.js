@@ -100,9 +100,7 @@ function ViewMore() {
   
       
       show.appendChild(result);
-      let R=result;
-      localStorage.setItem("save",R)
-      show.appendChild(result);
+      
     });
   
     show.style.display = "block"; // Show the 'detais' section
