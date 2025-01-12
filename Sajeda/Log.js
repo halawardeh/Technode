@@ -11,56 +11,27 @@ loginbtn.addEventListener("click", () => {
 });
 
 
-let isLoggedIn = false;
+function login(event){
 
-function login(event) {
-
-  event.preventDefault();
-
-  let user = document.getElementById("username").value;
-  let checkuser = localStorage.getItem("username");
-
-  let userPassword = document.getElementById("password").value;
-  let checkPassword = localStorage.getItem("password");
-
-  let email = document.getElementById("email").value;
-  let checkemail = localStorage.getItem("email");
-
-  let Invalide = document.getElementById("fncheck");
-
-  if ((user === checkuser || email === checkemail) && (userPassword === checkPassword)) {
-    
-    isLoggedIn = true;
-    window.location.replace("home.html");
-    
-    
-
-  }
-
-  else
-    Invalide.innerHTML = "Invalide username or password";
-
-    return isLoggedIn;
-}
-
-
-
-function signup(event){
     event.preventDefault();
 
-    let name = document.getElementById("username").value;
-    localStorage.setItem("username", name);
-    
+    let user = document.getElementById("username").value;
+    let checkuser = localStorage.getItem("username");
+
+    let userPassword = document.getElementById("password").value;
+    let checkPassword = localStorage.getItem("password");
+
     let email = document.getElementById("email").value;
-    localStorage.setItem("email", email);
+    let checkemail = localStorage.getItem("email");
 
-    let password = document.getElementById("password").value;
-    localStorage.setItem("password", password);
-  
+    let Invalide = document.getElementById("fncheck");
 
-    let submit = document.getElementById("signbutton").value;
-    localStorage.setItem("signbutton", submit);
-   
+    if ( (user === checkuser || email === checkemail) && (userPassword === checkPassword))
+      
+            window.location.replace("home.html");
+        
+    else 
+        Invalide.innerHTML = "Invalide username or password";
 }
 
 
@@ -70,7 +41,7 @@ function signup(event){
 
   let firstname = document.getElementById("firstName").value;
   localStorage.setItem("firstName", firstname);
-
+  
   let Lastname = document.getElementById("lastName").value;
   localStorage.setItem("lastName", Lastname);
 
@@ -96,37 +67,38 @@ function signup(event){
 
   let submit = document.getElementById("signbutton").value;
   localStorage.setItem("signbutton", submit);
+
+  
  
 }
 
 
 
 
-function namevalidation() {
+function namevalidation(){
 
   let vname= document.getElementById("firstName").value;
   let nameerror= document.getElementById("fncheck");
-  let ragname= /^[a-zA-Z]$/;
+  let ragname= /^[a-zA-Z]+$/;
   if(!ragname.test(vname)){
       // nameerror.innerHTML = "Numbers are not allowed"
       // return false;
       nameerror.innerHTML = "Numbers are not allowed";
-     }
+    }
   else{
       nameerror.innerHTML = "";
-    
+     
   }
 }
 
 
-function lastnamevalidation() {
+function lastnamevalidation(){
 
   let vlname= document.getElementById("lastName").value;
   let lnameerror= document.getElementById("lncheck");
-  let raglname= /^[a-zA-Z]$/;
+  let raglname= /^[a-zA-Z]+$/;
   if(!raglname.test(vlname)){
-      // nameerror.innerHTML = "Numbers are not allowed"
-      // return false;
+    
       lnameerror.innerHTML = "Numbers are not allowed";
     }
   else{
@@ -137,74 +109,57 @@ function lastnamevalidation() {
 
 
 
-function emailvalidation() {
-
-  let vemail = document.getElementById("email").value;
+function emailvalidation(){
+    
+  let vemail= document.getElementById("email").value;
   let emailerror = document.getElementById("emailcheck");
-  const regexemail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  if (!regexemail.test(vemail)) {
-    emailerror.innerHTML = "The email is not valid";
+  const regexemail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/ ;
+  if (!regexemail.test(vemail)){
+      emailerror.innerHTML= "The email is not valid";
   }
-  else {
-    emailerror.innerHTML = "";
+  else{
+      emailerror.innerHTML = "";
 
   }
 }
 
 
 
-function passwordvalidation() {
+function passwordvalidation(){
   let vpassword = document.getElementById("password").value;
   let passworderror = document.getElementById("passcheck");
 
-  const regexpassword = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*.]).{8,}$/
-  if (!regexpassword.test(vpassword)) {
-    passworderror.innerHTML = "Invalid Password. Must be 8+ characters, 1 number, 1 special char";
+  const regexpassword =  /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*.]).{8,}$/
+  if(!regexpassword.test(vpassword)){
+      passworderror.innerHTML = "Invalid Password. Must be 8+ characters, 1 number, 1 special char";
   }
-  else {
-    passworderror.innerHTML = "";
-  }
+  else{
+      passworderror.innerHTML = "";}
 }
 
 
 
-function confirmpassword() {
+function confirmpassword(){
   let fpassword = document.getElementById("password").value;
   let spassword = document.getElementById("cpassword").value;
   let confpass = document.getElementById("cpasscheck");
   confpass.innerHTML = ""
-  if (fpassword != spassword)
-    confpass.innerHTML = "not the same Password";
+  if(fpassword != spassword)
+      confpass.innerHTML = "not the same Password";
 }
 
 
 
 
-function checkphone(){
-    let vphone = document.getElementById("phoneNumber").value;
-    let phoneerror = document.getElementById("phonecheck");
-    const phonePattern = /^[0-9]+$/; 
 
-    if(!phonePattern.test(vphone)){
-        phoneerror.innerHTML = "Please enter a valid phone number (only numbers are allowed)";
-    }
-    else{
-        phoneerror.innerHTML = "";}
-
-// }
-
-
-
-function bdatevalidation() {
-  let vdate = document.getElementById("birthDate").value;
+function bdatevalidation(){
+  let vdate= document.getElementById("birthDate").value;
   let dateerror = document.getElementById("dcheck");
   const regexdate = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/[0-9]{4}$/;
 
-  if (!regexdate.test(vdate)) {
-    dateerror.innerHTML = "The format should be dd/mm/yyyy";
+  if(!regexdate.test(vdate)) {
+      dateerror.innerHTML= "The format should be dd/mm/yyyy";}
+  else{
+      dateerror.innerHTML="";}
   }
-  else {
-    dateerror.innerHTML = "";
-  }
-}
 
