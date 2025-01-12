@@ -205,19 +205,6 @@ body {
   transform: translateX(200%);
 }
 
-
-/* .flexname{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 10px;
-  width: 100%;
-}
-
-.flexname input{
-width: 45%;
-} */
-
 .gender-option{
   display: flex;
   flex-direction: row;
