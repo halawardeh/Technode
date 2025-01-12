@@ -99,7 +99,7 @@ function ViewMore() {
         The Correct Answer: ${question.correct_answer}<br><br>
       `;
   
-     
+      show.appendChild(result);
     });
   
     show.style.display = "block"; // Show the 'detais' section

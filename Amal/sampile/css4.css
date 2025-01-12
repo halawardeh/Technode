@@ -1,13 +1,14 @@
 
 
 
-/* From Uiverse.io by eslam-hany */ 
+
+
 .card {
     margin-top: 20vw;
     position: relative;
     width: 90vw;
     height: 50vw;
-    background: #DCE4C9;
+    background: #e07c39b9;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,7 +30,7 @@
     justify-content: center;
     font-size: 25px;
     font-weight: bold;
-    background-color: #F5F5DC;
+    background-color: orange;
     transition: all 0.5s;
   }
   
@@ -89,9 +90,9 @@
 
 }
 .card-img-top{
-    width: 8vw;
+    width: 20vw;
     height: 12vw;
-    padding-left:7vw;
+    padding-left:1vw;
     margin-top: 1vw;
 }
 
@@ -99,7 +100,7 @@
     font-size: 2vw;
     margin-top: -6vw;
     padding-top: 5vw;
-    margin-left: 6vw;
+    margin-left: 5vw;
     margin-left: 8vw;
 }
 .btn {
@@ -142,17 +143,18 @@
 } 
 
 .card2-img-top{
-    width: 8vw;
+    width: 20vw;
     height: 12vw;
-    padding-left:7vw;
+    padding-left:3vw;
     margin-top: 1vw;
+    margin-left: -1.5vw;
 }
 .card2-title{
     font-size: 2vw;
     margin-top: -6vw;
     padding-top: 5vw;
     padding-left: 0vw;
-    margin-left: 5vw;
+    margin-left: 6vw;
 }
 .btn2 {
     width: 8vw;
@@ -192,10 +194,11 @@
     transform: scale(1.5);
 }
 .card3-img-top{
-    width: 8vw;
+    width: 20vw;
     height: 12vw;
-    padding-left:7vw;
+    padding-left:1.5vw;
     margin-top: 1vw;
+    
 }
 .card3-title{
     font-size: 2vw;
