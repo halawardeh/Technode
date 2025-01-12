@@ -47,7 +47,7 @@ body {
     font-size: 1rem;
     color: #808080;
     margin-top: 5px;
-    border: 1px solid #EE4E34;
+    border: 1px solid #a2665c;
     border-radius: 6px;
     background: #FCEDDA;
 }
@@ -77,7 +77,7 @@ body {
 }
 
 .gender input {
-    accent-color: #EE4E34;
+    accent-color: #b6796f;
 }
 
 .form :where(.gender input, .gender label) {
@@ -113,9 +113,9 @@ body {
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.2s ease;
-    background: #EE4E34;
+    background: #9d6e67;
 }
 
 .form button:hover {
-    background: #EE3E34;
+    background: #b8716d;
 }
