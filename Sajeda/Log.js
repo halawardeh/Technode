@@ -11,7 +11,7 @@ loginbtn.addEventListener("click", () => {
 });
 
 
-let isLoggedIn = false;
+// let isLoggedIn = false;
 
 function login(event) {
 
@@ -30,7 +30,7 @@ function login(event) {
 
   if ((user === checkuser || email === checkemail) && (userPassword === checkPassword)) {
     
-    isLoggedIn = true;
+    // isLoggedIn = true;
     window.location.replace("home.html");
     
     
@@ -40,7 +40,7 @@ function login(event) {
   else
     Invalide.innerHTML = "Invalide username or password";
 
-    return isLoggedIn;
+    // return isLoggedIn;
 }
 
 
@@ -180,18 +180,18 @@ function confirmpassword() {
 
 
 
-function checkphone(){
-    let vphone = document.getElementById("phoneNumber").value;
-    let phoneerror = document.getElementById("phonecheck");
-    const phonePattern = /^[0-9]+$/; 
+// function checkphone(){
+//     let vphone = document.getElementById("phoneNumber").value;
+//     let phoneerror = document.getElementById("phonecheck");
+//     const phonePattern = /^[0-9]+$/; 
 
-    if(!phonePattern.test(vphone)){
-        phoneerror.innerHTML = "Please enter a valid phone number (only numbers are allowed)";
-    }
-    else{
-        phoneerror.innerHTML = "";}
+//     if(!phonePattern.test(vphone)){
+//         phoneerror.innerHTML = "Please enter a valid phone number (only numbers are allowed)";
+//     }
+//     else{
+//         phoneerror.innerHTML = "";}
 
-// }
+//  }
 
 
 
