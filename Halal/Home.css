@@ -299,6 +299,10 @@ h3 {
     color: #fff !important;
 }
 
+#profileBtn{
+    display: none;
+}
+
 @media (max-width: 600px) {
     .carousel-caption {
         display: none;
