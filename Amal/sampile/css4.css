@@ -19,10 +19,10 @@
 
 
 .card {
-    margin-top: 10vw;
+    margin-top: 5.5vw;
     position: relative;
     width: 90vw;
-    height: 50vw;
+    height: 30vw;
     background: #e07c39b9;
     display: flex;
     align-items: center;
@@ -100,7 +100,7 @@
 }
 .card1:hover{
     background-color: #e07c39b9;
-    transform: scale(1.5);
+    transform: scale(1.1);
    
 
 }
@@ -156,7 +156,7 @@
 }
 .card2:hover{
     background-color: #e07c39b9;
-    transform: scale(1.5);
+    transform: scale(1.1);
 } 
 
 .card2-img-top{
@@ -210,7 +210,7 @@
 }
 .card3:hover{
     background-color: #e07c39b9;
-    transform: scale(1.5);
+    transform: scale(1.1);
 }
 .card3-img-top{
     width: 20vw;
