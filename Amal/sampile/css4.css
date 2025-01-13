@@ -19,7 +19,7 @@
 
 
 .card {
-    margin-top: 20vw;
+    margin-top: 10vw;
     position: relative;
     width: 90vw;
     height: 50vw;
@@ -126,7 +126,7 @@
     margin-left: 2.5vw;
     border: 0.5px solid black;
     border-radius: 6vw;
-    background-color:#E07B39 ;
+    background-color:#eb7322 ;
     color: white;
     cursor: pointer;
 }
@@ -141,6 +141,8 @@
     background-color:orange;
     border: 0.01px solid black;
     border-radius: 6vw;
+    margin-left: 12vw;
+    margin-top: -5vw;
 }
 
 /* ******second card******** */
@@ -176,10 +178,10 @@
     height: 5vw;
     font-size: 1vw;
     margin-top: 1vw;
-    margin-left: 3.5vw;
+    margin-left: 1.5vw;
     border: 0.5px solid black;
     border-radius: 6vw;
-    background-color: #E07B39 ;
+    background-color: #ffb732;
     color: white;
     cursor: pointer;
 }
@@ -194,6 +196,8 @@
     background-color:orange ;
     border: 0.01px solid black;
     border-radius: 6vw;
+    margin-left: 12vw;
+    margin-top: -5vw;
 }
 /* *********third card******* */
 .card3{
@@ -228,10 +232,10 @@
     height: 5vw;
     font-size: 1vw;
     margin-top: 1vw;
-    margin-left: 3.5vw;
+    margin-left: 1.5vw;
     border: 0.5px solid black;
     border-radius: 6vw;
-    background-color:#E07B39 ;
+    background-color:#ffb732 ;
     color: white;
     cursor: pointer;
 }
@@ -246,10 +250,12 @@
     background-color:orange;
     border: 0.01px solid black;
     border-radius: 6vw;
+    margin-left: 12vw;
+    margin-top: -5vw;
 }
 /* *****flex*** */
 .fflex{
-    margin-top: 10vw;
+    margin-top: 5vw;
     display: flex;
     justify-content: space-between;
 }

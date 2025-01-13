@@ -53,6 +53,7 @@ function NextQ() {
     ShowResult();      // Show the results
   }
 }
+  document.getElementById("next-button").addEventListener("click", NextQ);
 
 function ShowResult() {
   const FinalResult = document.getElementById("result");
@@ -104,7 +105,7 @@ function ViewMore() {
   
     show.style.display = "block"; // Show the 'detais' section
   }
-  document.getElementById("next-button").addEventListener("click", NextQ);
+ 
 
 
 

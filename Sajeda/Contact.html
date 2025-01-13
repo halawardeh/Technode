@@ -4,55 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <link rel="stylesheet" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="Contact.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
     <div class="heading">
-        <h1>Contact us</h1>
+        <h1>Contact us</h1><br>
+        <p>Have a questions, feedback or need support? We're here to help!<br>Feel free to contact us using the form below of via the provided details.</p>
     </div>
 
+    <br>
+
+    <section id="fixeddata">
 
 
+        <div class="clmfixed">
 
-
-
-    <section class="contactsection">
-
-        <div id="fixeddata">
+        <div class="getintouch">
             <h2>Get in Touch</h2>
-            <p class="pardiv">Have a questions, feedback or need support? We're here to help!<br>Feel free to contact us using the form below of via the provided details.</p>
-            <div class="intouchflex">
-                <div class="getdiv">
-                    <img>
-                    <h4>Email Address</h4>
-                    <a href="mailto:sajedakhasawneh5@gmail.com">sajedakhasawneh5@gmail.com</a> 
+                <p class="pardiv">Fill out the form below or use the details provided t get in touch with us.<br>Your feedback and questions are important to us!</p>
+        </div>
+
+        <div class="directcontent">
+                <div class="flexicon">
+                    <i class="fa fa-envelope" aria-hidden="true" class="socialIcons" style=" font-size: 30px;"></i>
+                    <div class="flexfixeddata">
+                        <h5>Email Us</h5>
+                        <a href="mailto:sajedakhasawneh5@gmail.com">sajedakhasawneh5@gmail.com</a>
+                    </div>   
+                 </div>
+
+                 <br><br>
+
+                <div class="flexicon">
+                    <i class="fa fa-phone-square" aria-hidden="true" class="socialIcons" style=" font-size: 30px;"></i>
+                    <div class="flexfixeddata">
+                        <h5>Call Us</h5>
+                        <a href="+968 798902468">+968 798902468</a>
+                    </div>
                 </div>
-            </div>
 
+                <br><br>
 
-            <div class="intouchflex">
-                <div class="getdiv">
-                    <!-- <i class="fa fa-phone-square" aria-hidden="true" class="icons"></i> -->
-                    <h4>Phone number</h4>
+                <div class="flexicon">
+                    <i class="fa fa-map-marker" aria-hidden="true" class="socialIcons" style=" font-size: 38px;"></i>
+                    <div class="flexfixeddata">
+                        <h5>Head Office</h5>
+                        <p>Irbid, Jordan</p>
+                    </div>
                 </div>
-                <a href="+968 798902468">+968 798902468</a>
-            </div>
+            
+        </div>
+    </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3043.348495403951!2d35.847093875112236!3d32.55259009542249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151c7715f2c2e7ab%3A0x51755840c8ddbefd!2sOrange%20Digital%20Village%20Irbid!5e1!3m2!1sen!2sjo!4v1736715810204!5m2!1sen!2sjo" width="350" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+    </section>
 
 
-            <div class="intouchflex">
-                <div class="getdiv">
-                    <img >
-                    <h4>Office Address</h4>
-                    <p>Irbid, Jordan</p>
-                </div>
-            </div>
 
+
+        
+    <section id="section3">
+        
+        <!-- <div class="imgsection3">
+            <img src="img/contactsection.png" style="width: 100; height: 75;">
+        </div> -->
+
+        <div class="section3flex">
+            <h2>Send Us a Message</h2><br>
+            <p>Fill out the form below or use the details provided to get in touch with us.<br>Your feedback and questions are important to us!</p>
         </div>
 
 
+        
+    <section class="contactsection">
+    
         <div id="contactform">
+            
+            <br><br><br><br>
             <form  onsubmit="storeform(event)">
 
                 <div class="formflex">
@@ -68,7 +100,7 @@
                 </div>
                 <br>
 
-                
+                                    
                 <div class="formflex">
                     <div>
                         <label for="email">Email</label><br>
@@ -89,29 +121,83 @@
                 </div>
 
                 <br>
-                <input type="submit" id="submit" value="Send">
+                <input type="submit" id="submit" value="Send" class="btn">
+                <br>
+                <br>
+             
             </form>
         </div>
 
+        <!-- <div class="contactimg">
+            <img src="img/contactsection.png">
+        </div> -->
+  
+
     </section>
-    
-    <section id="section3">
+    </section>
         
-        <div class="imgsection3">
-            <img src="img/contactsection.png" style="width: 100; height: 75;">
+<br>
+<br>
+
+
+<!-- 
+    <section class="contactsection">
+    
+        <div id="contactform">
+            
+            <br><br><br><br>
+            <form  onsubmit="storeform(event)">
+
+                <div class="formflex">
+                    <div>
+                        <label for="fname">First Name</label><br>
+                        <input type="text" id="fname">
+                    </div>
+
+                    <div>
+                        <label for="lname">Last Name</label><br>
+                        <input type="text" id="lname">
+                    </div>
+                </div>
+                <br>
+
+                                    
+                <div class="formflex">
+                    <div>
+                        <label for="email">Email</label><br>
+                        <input type="email" id="email">
+                    </div>
+                        
+                    <div>
+                        <label for="phone">Phone</label><br>
+                        <input type="number" id="phone">
+                    </div>
+                </div>
+
+
+                <br>
+                <div>
+                    <label for="message">Message</label><br><br>
+                    <textarea id="message" rows="8" cols="30"></textarea>
+                </div>
+
+                <br>
+                <input type="submit" id="submit" value="Send" class="btn">
+             
+            </form>
         </div>
 
-        <div class="section3flex">
-            <h2>Start Your Lwarning Journey Now</h2>
-            <br><br>
-            <p>Unlock your potential with our engaging quizzes and comprehensive courses.<br>Whether you're testing your knwoledge or diving deep into learning, we have the perfect tools to hep you succeed!</p>
-        </div>
-    </section>
-        
+        <div class="contactimg">
+            <img src="img/contactsection.png">
+        </div> -->
+  
+
+    <!-- </section>  -->
+
 
 
         <section id="faqs">
-            <h2 style="padding-left: 200px;">FAQs</h2><br>
+            <h2 style="padding-left: 260px;">Frequently<br>Asked<br>Questions</h2><br>
             <div class="faqsflex">
                 <div class="accordion">
                     <div class="accordion-header">
@@ -153,16 +239,10 @@
                     </div>
                 </div>
             </div>
-            <!-- <div>
+             <!-- <div>
                 <img src="img/b9a9c44d0faa77a2bbe98f4bf8448ea6-removebg-preview.png" width="150px" height="75px">
-            </div> -->
-    </section>
-
-    <section id="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3043.348495403951!2d35.847093875112236!3d32.55259009542249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151c7715f2c2e7ab%3A0x51755840c8ddbefd!2sOrange%20Digital%20Village%20Irbid!5e1!3m2!1sen!2sjo!4v1736493440147!5m2!1sen!2sjo" width="880" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </section>
-
-
+            </div> --> 
+    </section> 
 
     <script src="Contact.js"></script>
 </body>
