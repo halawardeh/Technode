@@ -21,10 +21,6 @@ function login(event) {
 
   event.preventDefault();
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 07ef37c9e964f6343ed4594d189d46d975947218
   // let user = document.getElementById("username").value;
   // let checkuser = localStorage.getItem("username");
 
@@ -40,16 +36,12 @@ function login(event) {
 
   let Invalide = document.getElementById("fncheck");
 
-<<<<<<< HEAD
   if (( email === checkemail) && (userPassword === checkPassword)) {
     
     isLoggedIn = true;
     window.location.replace("home.html");
     
     
-=======
-  if (( email == checkemail) && (userPassword == checkPassword)) {
->>>>>>> 07ef37c9e964f6343ed4594d189d46d975947218
 
     sessionStorage.setItem("isLoggedIn", "true"); // Set login state
     window.location.replace("../Hala/index.html");
@@ -79,12 +71,8 @@ function signup(event) {
 
 
 
-<<<<<<< HEAD
 
 function signup(event){
-=======
-function signup(event) {
->>>>>>> 07ef37c9e964f6343ed4594d189d46d975947218
   event.preventDefault();
 
   let firstname = document.getElementById("firstName").value;
@@ -115,11 +103,8 @@ function signup(event) {
   let submit = document.getElementById("signbutton").value;
   localStorage.setItem("signbutton", submit);
 
-<<<<<<< HEAD
   window.alert("Thank you for registering with us");
  
-=======
->>>>>>> 07ef37c9e964f6343ed4594d189d46d975947218
 }
 
 
@@ -162,7 +147,8 @@ function lastnamevalidation() {
 
 function emailvalidation() {
 
-  let vemail = document.getElementById("email").value;
+  debugger
+  let vemail = document.getElementById("signup_email").value;
   let emailerror = document.getElementById("emailcheck");
   const regexemail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   if (!regexemail.test(vemail)) {
@@ -177,7 +163,8 @@ function emailvalidation() {
 
 
 function passwordvalidation() {
-  let vpassword = document.getElementById("password").value;
+  debugger
+  let vpassword = document.getElementById("signup_password").value;
   let passworderror = document.getElementById("passcheck");
 
   const regexpassword = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*.]).{8,}$/
