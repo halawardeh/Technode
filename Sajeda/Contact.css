@@ -62,6 +62,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    /* width: 60%; */
     gap: 10%;
 }
 
@@ -169,17 +170,26 @@ textarea {
 /* faqa section  */
 
 #faqs{
-    padding-top: 35rem;
-    padding-left: 5rem;
+    padding-top: 30rem;
+    padding-left: 20rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
-    gap: 2.25%;
+    width: 70%;
+    gap: 35%;
+}
+
+
+.faqsheadques{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* gap: 1rem; */
 }
 
 #faqs h2{
     padding-top: 20px;
+    padding-left: 10%;
     line-height: 40px;
 }
 
@@ -199,7 +209,7 @@ textarea {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 40%;
+    width: 100%;
     /* padding-left: 12rem; */
 }
 
@@ -317,4 +327,9 @@ textarea {
     flex-direction: column;
     flex-wrap: wrap;
 
+}
+
+.map{
+    padding-top: 2rem;
+    padding-left: 320px;
 }
