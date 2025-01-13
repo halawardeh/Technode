@@ -29,22 +29,18 @@ function loadCards() {
 function startIqQuiz() {
   if (!IqQuizTaken) {
     window.location.href = "/Firas/iqTest/iqTest.html";
-  }
-  else
-  alert("you have already take this quiz");
+  } else alert("you have already take this quiz");
 }
 function startEngQuiz() {
   if (!EngQuizTaken) {
     window.location.href = "/Firas/englishTest/englishTest.html";
-  }else
-  alert("you have already take this quiz");
+  } else alert("you have already take this quiz");
 }
 
 function startTechQuiz() {
   if (!TechQuizTaken) {
     window.location.href = "/Firas/techTest/tech.html";
-  }else
-  alert("you have already take this quiz");
+  } else alert("you have already take this quiz");
 }
 
 async function readIqData() {
@@ -126,4 +122,16 @@ function reviewDivEngClose() {
 
 function reviewDivTechClose() {
   reviewDivTech.style.display = "none";
+}
+function quizCard() {
+  window.location.href = "/Firas/mainCards/firasCards.html";
+}
+
+function logoutBTN() {
+  debugger;
+  sessionStorage.isLoggedIn = "false";
+
+  document.getElementById("login-button").className = "nav_block";
+  document.getElementById("logout-button").className = "nav_none";
+  document.getElementById("profile-icon").className = "nav_none";
 }

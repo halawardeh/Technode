@@ -21,6 +21,25 @@
    text-align: center;
 }
 
+
+.button-item {
+    background-color: transparent;
+    color: #fff;
+  }
+  
+  .button-item .button-bg {
+    border-color: gold;
+    background-color: gold;
+  
+  
+  }
+
+  .navbar-list {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+
+  }
 .heading h1{
     color: gold;
     font-weight: 1000; 
@@ -29,7 +48,13 @@
     color: black;
     
 }
-
+.nav_none {
+    display: none;
+  }
+  
+  .nav_block {
+    display: block;
+  }
 .heading p:hover{
     color: gold;
 }

@@ -19,6 +19,13 @@ body {
     box-sizing: border-box;
 }
 
+.nav_none {
+    display: none;
+  }
+  
+  .nav_block {
+    display: block;
+  }
 .container header {
     font-size: 1.2rem;
     color: #000;

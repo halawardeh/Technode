@@ -58,70 +58,109 @@
 
 <body>
     <!-- Header Section -->
-    <header class="header" data-header>
+    <header class="header" data-header style="background-color: rgb(21, 21, 21);">
         <div class="container">
-
-            <div class="overlay" data-overlay></div>
-
-            <a href="#" class="logo">
+    
+          <div class="overlay" data-overlay></div>
+    
+          <a href="/Hala/index.html" class="logo">
+            Tech <i>Node</i>
+          </a>
+    
+          <nav class="navbar" data-navbar>
+    
+            <div class="navbar-top">
+              <a href="#" class="logo logo-dark">
                 Tech <i>Node</i>
-            </a>
+              </a>
+              <button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn>
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+            </div>
+    
+            <ul class="navbar-list">
+    
+              <li class="navbar-item">
+                <a href="../Hala/index.html" class="navbar-link" data-navbar-link>Home</a>
+              </li>
+    
+              <li class="navbar-item">
+                <a href="/Firas/mainCards/firasCards.html" class="navbar-link" data-navbar-link>Quizzes</a>
+              </li>
+    
+              <li class="navbar-item">
+                <a  href="/Hala/index.html#services" class="navbar-link" data-navbar-link>Services</a>
+              </li>
+    
+    
+              <li class="navbar-item">
+                <a href="../Hazem/AboutUs.html" class="navbar-link" data-navbar-link>About Us</a>
+              </li>
+    
+              <li class="navbar-item">
+                <a href="../Sajeda/Contact.html" class="navbar-link" data-navbar-link>Contact Us</a>
+              </li>
+              <li class="search-box">
+                <button class="btn-search"><i class="bx bx-search"></i></button>
+                <input type="text" class="input-search" placeholder="Search...">
+              </li>
+              
 
-            <nav class="navbar" data-navbar>
-
-                <div class="navbar-top">
-                    <a href="#" class="logo logo-dark">
-                        Tech <i>Node</i>
-                    </a>
-                    <button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn>
-                        <ion-icon name="close-outline"></ion-icon>
-                    </button>
-                </div>
-
-                <ul class="navbar-list">
-
-                    <li class="navbar-item">
-                        <a href="/Hala/index.html" class="navbar-link  nav99"  data-navbar-link>Home</a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="/Hala/index.html" class="navbar-link nav99" data-navbar-link>Quizzes</a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="/Hala/index.html" class="navbar-link  nav99" data-navbar-link>Services</a>
-                    </li>
-
-
-                    <li class="navbar-item">
-                        <a href="#" class="navbar-link  nav99" data-navbar-link>About Us</a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="/Sajeda/Contact.html" class="navbar-link nav99" data-navbar-link>Contact Us</a>
-                    </li>
-                    <li class="search-box">
-                        <button class="btn-search  nav99"><i class="bx bx-search "></i></button>
-                        <input type="text" class="input-search" placeholder="Search...">
-                    </li>
-                </ul>
-
-            </nav>
-
-            <!-- <a href="#" class="btn">
+              <li id="login-button">
+                <!-- Login Button -->
+                <button class="button button-item" ><a href="../Sajeda/Log.html">
+                  <span class="button-bg">
+                    <span class="button-bg-layers">
+                      <span class="button-bg-layer button-bg-layer-1 -purple"></span>
+                      <span class="button-bg-layer button-bg-layer-2 -turquoise"></span>
+                      <span class="button-bg-layer button-bg-layer-3 -yellow"></span>
+                    </span>
+                  </span></a>
+                  <a style="text-decoration: none;color: white;" href="/Sajeda/Log.html"><span class="button-inner" id="log_in">Login </span></a>
+                </button>
+    
+    
+              </li>
+              <li class="nav_none" id="logout-button">
+                <!-- Login Button -->
+    
+                <button onclick="logoutBTN()" class="button button-item" >
+                  <span class="button-bg">
+                    <span class="button-bg-layers">
+                      <span class="button-bg-layer button-bg-layer-1 -purple"></span>
+                      <span class="button-bg-layer button-bg-layer-2 -turquoise"></span>
+                      <span class="button-bg-layer button-bg-layer-3 -yellow"></span>
+                    </span>
+                  </span></a>
+                  <span class="button-inner" id="">Log Out </span>
+                </button>
+    
+    
+              </li>
+              <li style=" margin-left: 10px; "id="profile-icon" class="nav_none">
+                <a href="../Bilal/Profile.html" style="display: inline-block; width: 40px; height: 40px; overflow: hidden; border-radius: 50%;">
+                    <img id="profile-image" src="../Hala/assets/images/user (1).png " style="width: 100%; height: 100%; object-fit: cover;">
+                </a>
+            </li>
+            
+            </ul>
+    
+          </nav>
+    
+          <!-- <a href="#" class="btn">
             <i class='bx bx-search' aria-hidden="true"></i>
     
             <span>Search</span>
           </a> -->
-
-
-
-            <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn>
-                <ion-icon name="menu-outline"></ion-icon>
-            </button>
-
+    
+    
+    
+          <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn>
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+    
         </div>
-    </header>
+      </header>
 
 
     <!-- About Us Section -->
@@ -184,7 +223,7 @@
 
                 <div class="footer-brand">
 
-                    <a href="#" class="logo">
+                    <a href="/Hala/index.html" class="logo">
                         Tech <i>Node</i>
                     </a>
                     <p class="text">
@@ -348,7 +387,42 @@
 
 
     </footer>
+<script>
+    // Function to handle login toggle
+window.onload = function () {
+  const logginuser = sessionStorage.getItem('isLoggedIn');
+  debugger
 
+  if (logginuser == "true") {
+
+    document.getElementById("login-button").className = "nav_none";
+    document.getElementById("logout-button").className = "nav_block";
+    document.getElementById("profile-icon").className = "nav_block";
+
+  }
+  else {
+    document.getElementById("login-button").className = "nav_block";
+    document.getElementById("logout-button").className = "nav_none";
+    document.getElementById("profile-icon").className = "nav_none";
+  }
+
+
+
+}
+
+
+// window.onload = updateLoginStatus();
+
+
+function logoutBTN() {
+  debugger
+  sessionStorage.isLoggedIn = "false";
+
+  document.getElementById("login-button").className = "nav_block";
+  document.getElementById("logout-button").className = "nav_none";
+  document.getElementById("profile-icon").className = "nav_none";
+}
+</script>
 </body>
 
 </html>

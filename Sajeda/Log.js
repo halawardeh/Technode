@@ -74,7 +74,7 @@ function signup(event) {
 
 function signup(event){
   event.preventDefault();
-
+debugger
   let firstname = document.getElementById("firstName").value;
   localStorage.setItem("firstName", firstname);
 
@@ -85,11 +85,11 @@ function signup(event){
   localStorage.setItem("birthDate", birthDate);
 
 
-  let password = document.getElementById("password").value;
-  localStorage.setItem("password", password);
+  let password1 = document.getElementById("password").value;
+  localStorage.setItem("password", password1);
 
-  let email = document.getElementById("email").value;
-  localStorage.setItem("email", email);
+  let email1 = document.getElementById("email").value;
+  localStorage.setItem("email", email1);
 
 
   let city = document.getElementById("city").value;

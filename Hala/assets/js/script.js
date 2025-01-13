@@ -95,6 +95,7 @@ function logoutBTN() {
 
 
 
-
-
-
+const section = document.getElementById('services');
+function toSerices(){
+window.scrollTo({ top: section.offsetTop, behavior: 'smooth'});
+}

@@ -82,3 +82,46 @@ window.onload = function () {
     document.getElementById("logout-button").className = "nav_none";
     document.getElementById("profile-icon").className = "nav_none";
   }
+
+
+  
+const section = document.getElementById('services');
+function toSerices(){
+window.scrollTo({ top: section.offsetTop, behavior: 'smooth'});
+}
+
+
+// Function to handle login toggle
+window.onload = function () {
+  const logginuser = sessionStorage.getItem('isLoggedIn');
+  debugger
+
+  if (logginuser == "true") {
+
+    document.getElementById("login-button").className = "nav_none";
+    document.getElementById("logout-button").className = "nav_block";
+    document.getElementById("profile-icon").className = "nav_block";
+
+  }
+  else {
+    document.getElementById("login-button").className = "nav_block";
+    document.getElementById("logout-button").className = "nav_none";
+    document.getElementById("profile-icon").className = "nav_none";
+  }
+
+
+
+}
+
+
+// window.onload = updateLoginStatus();
+
+
+function logoutBTN() {
+  debugger
+  sessionStorage.isLoggedIn = "false";
+
+  document.getElementById("login-button").className = "nav_block";
+  document.getElementById("logout-button").className = "nav_none";
+  document.getElementById("profile-icon").className = "nav_none";
+}
