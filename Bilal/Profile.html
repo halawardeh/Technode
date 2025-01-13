@@ -7,12 +7,84 @@
     <title>Profile</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
     <link rel="stylesheet" href="./Profile.css">
+
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/svg+xml">
+
+    <!-- 
+    -  css
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- 
+    - google font
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Source+Sans+Pro:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600&family=Source+Sans+Pro:wght@600;700&display=swap"
+        rel="stylesheet">
+
 </head>
 
 <body>
 
+
+    <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+            <a href="#" class="logo logo-dark">
+                Tech <i>Node</i>
+            </a>
+            <button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn>
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+        </div>
+
+        <ul class="navbar-list">
+
+            <span class="Logo_Image"><img src="./Images/image.png" alt=""></span>
+
+            <li class="navbar-item">
+                <a href="#home" class="navbar-link" data-navbar-link>Home</a>
+            </li>
+
+            <li class="navbar-item">
+                <a href="#" class="navbar-link" data-navbar-link>Quizzes</a>
+            </li>
+
+            <li class="navbar-item">
+                <a href="#services" class="navbar-link" data-navbar-link>Services</a>
+            </li>
+
+
+            <li class="navbar-item">
+                <a href="../Hazem/AboutUs.html" class="navbar-link" data-navbar-link>About Us</a>
+            </li>
+
+            <li class="navbar-item">
+                <a href="../Sajeda/Contact.html" class="navbar-link" data-navbar-link>Contact Us</a>
+            </li>
+          
+           
+            
+        </ul>
+
+
+
+    </nav>
+
+    <img src="./Images/Menu.png" alt="" id="Burger_Menu">
+
     <div class="container">
+
+
 
         <div class="Box-1"></div>
 
@@ -47,7 +119,7 @@
 
                 <div id="Btn-1">
 
-                    <button type="button" class="btn btn-primary" id="button-Form">Edit Profile</button>
+                    <button type="button" class="btn btn-primary" id="button12-Form">Edit Profile</button>
 
                 </div>
 
@@ -154,7 +226,7 @@
         <p class="message">You can edit your profile from here.</p>
         <div class="flex">
             <label>
-                <input required="" placeholder="" type="text" class="input" id="Edit-Fname" onkeyup="IsValid()" >
+                <input required="" placeholder="" type="text" class="input" id="Edit-Fname" onkeyup="IsValid()">
                 <span>First Name</span>
                 <span id="Error-FName" class="IsValid"></span>
             </label>
@@ -201,10 +273,183 @@
             </label>
             <span class="selection"></span>
         </div>
+       
         <button class="submit" id="Save_Change">Save Change</button>
     </form>
 
-    <div id="overlay" class="overlay"></div>
+    <div id="overlay" class="overlay12"></div>
+
+    <footer class="footer">
+
+        <div class="footer-top section">
+            <div class="container">
+
+                <div class="footer-brand">
+
+                    <a href="#" class="logo">
+                        Tech <i>Node</i>
+                    </a>
+                    <p class="text">
+                        Your trusted partner for learning and growth. Explore expertly crafted courses and engaging
+                        quizzes designed
+                        to challenge your mind, enhance your skills, and unlock your potential. Start your journey today
+                        with
+                        TechNode and achieve greatness.
+                    <ul class="social-list">
+
+                        <li>
+                            <a href="https://web.facebook.com/?_rdc=1&_rdr" class="social-link">
+                                <ion-icon name="logo-facebook"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.instagram.com/direct/inbox/" class="social-link">
+                                <ion-icon name="logo-instagram"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://x.com/?lang=en&mx=2" class="social-link">
+                                <ion-icon name="logo-twitter"></ion-icon>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <ul class="footer-list">
+
+                    <li>
+                        <p class="footer-list-title">Our links</p>
+                    </li>
+
+                    <li>
+                        <a href="#home" class="footer-link">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#About" class="footer-link">About Us</a>
+                    </li>
+
+                    <li>
+                        <a href="#Services" class="footer-link">Services</a>
+                    </li>
+
+                    <li>
+                        <a href="#Contact" class="footer-link">Contact US</a>
+                    </li>
+
+                </ul>
+
+                <ul class="footer-list">
+
+                    <li>
+                        <p class="footer-list-title">Our Services</p>
+                    </li>
+
+                    <li>
+                        <a target="_blank"
+                            href="https://immi.homeaffairs.gov.au/visas/working-in-australia/skills-assessment"
+                            class="footer-link">Skill Assessment</a>
+                    </li>
+
+                    <li>
+                        <a target="_blank"
+                            href="https://artsadministration.org/programs/?program-filter-degrees=&program-filter-state=&deg=cert&opt=all&cnt=all&gad_source=1&gclid=CjwKCAiA7Y28BhAnEiwAAdOJUFiRHTH0xXtWm1Uwlbs7R_qXsFijUyPd6JHR3qU6PEJW1yndfpVaKxoCeaoQAvD_BwE"
+                            class="footer-link">Certification Programs</a>
+                    </li>
+
+                    <li>
+                        <a target="_blank"
+                            href="https://www.scholastic.com/parents/family-life/social-emotional-learning/technology-and-kids/understanding-interactive-learning.html#:~:text=What%20is%20it%3F,information%2C%20figures%2C%20or%20equations."
+                            class="footer-link">Interactive Learning</a>
+                    </li>
+
+
+
+                </ul>
+
+                <ul class="footer-list">
+
+                    <li>
+                        <p class="footer-list-title">Other links</p>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer-link">FAQ</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer-link">Privacy Policy</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer-link">Support</a>
+                    </li>
+
+                </ul>
+
+                <ul class="footer-list">
+
+                    <li>
+                        <p class="footer-list-title">Contact Us</p>
+                    </li>
+
+                    <li class="footer-item">
+
+                        <div class="footer-item-icon">
+                            <ion-icon name="call"></ion-icon>
+                        </div>
+
+                        <div>
+                            <a href="tel:+9621509970" class="footer-item-link">+962-150-9970</a>
+                            <a href="tel:+9622581637" class="footer-item-link">+962-150-9970</a>
+                        </div>
+
+                    </li>
+
+                    <li class="footer-item">
+
+                        <div class="footer-item-icon">
+                            <ion-icon name="mail"></ion-icon>
+                        </div>
+
+                        <div>
+                            <a href="mailto:halabanihamad10@gmail.com"
+                                class="footer-item-link">halabanihamad10@gmail.com</a>
+                            <a href="mailto:>sajedakhasawneh5@gmail.com"
+                                class="footer-item-link">sajedakhasawneh5@gmail.com</a>
+                        </div>
+
+                    </li>
+
+                    <li class="footer-item">
+
+                        <div class="footer-item-icon">
+                            <ion-icon name="location"></ion-icon>
+                        </div>
+
+                        <address class="footer-item-link">
+                            Orange Coding Acadimy, Irbid, Jordan
+                        </address>
+
+                    </li>
+
+                </ul>
+
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">
+                    &copy; 2025 <a href="https://saimcode.vercel.app" class="copyright-link">Saimcode</a>. All Right
+                    Reserved
+                </p>
+            </div>
+        </div>
+
+
+    </footer>
 
     <script src="./Profile.js"></script>
 </body>

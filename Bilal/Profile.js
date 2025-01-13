@@ -17,7 +17,7 @@ let ErrorCity = document.getElementById('Valid_City');
 
 let Overlay = document.getElementById('overlay');
 
-let popupButton = document.getElementById('button-Form');
+let popupButton = document.getElementById('button12-Form');
 
 let popupMenu = document.getElementById('Form');
 
@@ -183,7 +183,7 @@ Save_Change.addEventListener('click', function (event) {
     }
 
 
-    
+
 
     City.value = Edit_City.value;
     Birth_Date.value = Edit_Date.value;
@@ -204,8 +204,8 @@ Save_Change.addEventListener('click', function (event) {
         return;
     } else {
         window.alert("Data has been saved successfully");
-         
-       
+
+
 
         localStorage.setItem('Fname', Edit_FName.value);
         localStorage.setItem('Lname', Edit_LName.value);
@@ -242,3 +242,16 @@ window.onload = function () {
     }
 
 }
+
+
+let Nav = document.getElementsByClassName("navbar")[0];
+
+let Burger = document.getElementById("Burger_Menu");
+
+console.log(Burger);
+
+Burger.addEventListener('click', function () {
+   
+    Nav.classList.toggle("navbarEdit");
+
+})

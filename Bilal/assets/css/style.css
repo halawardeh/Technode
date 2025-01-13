@@ -1556,15 +1556,7 @@ h3 .dot {
   .navbar-list {
     display: flex;
     gap: 25px;
-
   }
-
-  /* @media (min-width: 992px) {
-    .navbar-list {
-      background-color: black !important;
-      color: white;
-    }
-  } */
 
   .navbar-item:not(:last-child) {
     border-bottom: none;
