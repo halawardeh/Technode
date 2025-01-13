@@ -23,19 +23,16 @@ async function readTestQ() {
     counter + 1 + "/15 Q. <br>" + currentQuestion.question;
 
   options.innerHTML = `
-      
-        <input class="option" onchange='handleChange1()' type="radio" id="options" name="options" value="${currentQuestion.option1}" />
-      <label class="option">${currentQuestion.option1}</label> <br /><br />
-
-      <input class="option" onchange='handleChange1()' type="radio" id="options" name="options" value="${currentQuestion.option2}" />
-      <label class="option" for="second">${currentQuestion.option2}</label><br /><br />
-
-      <input class="option" onchange='handleChange1()' type="radio" id="options" name="options" value="${currentQuestion.option3}" />
-      <label class="option" for="third">${currentQuestion.option3}</label><br /><br />
-
-      <input class="option" onchange='handleChange1()' type="radio" id="options" name="options" value="${currentQuestion.option4}" />
-      <label class="option" for="forth">${currentQuestion.option4}</label><br /><br />
-    `;
+    <div class="input-Div-js"><input id="option1" class="input" onchange='handleChange1()' type='radio' class='input' name='option' value='${currentQuestion.option1}'>
+    <label class="radio-label" for='option1'>${currentQuestion.option1}</label></div><br>
+    <div class="input-Div-js"><input id="option2" class="input" onchange='handleChange1()' type='radio' class='input' name='option' value='${currentQuestion.option2}'>
+    <label class="radio-label" for='option2'>${currentQuestion.option2}</label></div><br>
+    <div class="input-Div-js"><input id="option3" class="input" onchange='handleChange1()' type='radio' class='input' name='option' value='${currentQuestion.option3}'>
+    <label class="radio-label" for='option3'>${currentQuestion.option3}</label></div><br>
+    <div class="input-Div-js"><input id="option4" class="input" onchange='handleChange1()' type='radio' class='input' name='option' value='${currentQuestion.option4}'>
+    <label class="radio-label" for='option4'>${currentQuestion.option4}</label></div><br>
+  
+  `;
 }
 
 function handleChange1() {
@@ -43,29 +40,28 @@ function handleChange1() {
 }
 
 function nextQ() {
-  answerTech.push(document.querySelector('input[name="options"]:checked').value);
-
+  answerTech.push(document.querySelector('input[name="option"]:checked').value);
 
   counter++;
-
+  console.log(currentQuestion.answer);
+  console.log(document.querySelector('input[name="option"]:checked').value);
   if (
-    currentQuestion.currect ==
-    document.querySelector('input[name="options"]:checked').value
+    currentQuestion.answer ==
+    document.querySelector('input[name="option"]:checked').value
   ) {
     scour++;
   }
 
-  console.log("the currect: " + currentQuestion.currect);
+  console.log("the currect: " + currentQuestion.answer);
   console.log(
     "your answer: " +
-      document.querySelector('input[name="options"]:checked').value
+      document.querySelector('input[name="option"]:checked').value
   );
   console.log(scour);
 
   if (counter >= questions.length) {
     localStorage.setItem("answersTech", JSON.stringify(answerTech));
-    localStorage.setItem("TechQuizTaken",true);
-
+    localStorage.setItem("TechQuizTaken", true);
 
     alert("Your finish You Exam.. ." + scour);
     if (scour < 8) {
@@ -103,19 +99,16 @@ function nextQ() {
   questionElement.innerHTML =
     counter + 1 + "/15 Q. <br>" + currentQuestion.question;
   options.innerHTML = `
-      
-      <input class="option" onchange='handleChange1()' type="radio" id="options" name="options" value="${currentQuestion.option1}" />
-      <label class="option">${currentQuestion.option1}</label> <br /><br />
-
-      <input class="option" onchange='handleChange1()' type="radio" id="options" name="options" value="${currentQuestion.option2}" />
-      <label class="option" for="second">${currentQuestion.option2}</label><br /><br />
-
-      <input class="option" onchange='handleChange1()' type="radio" id="options" name="options" value="${currentQuestion.option3}" />
-      <label class="option" for="third">${currentQuestion.option3}</label><br /><br />
-
-      <input class="option" onchange='handleChange1()' type="radio" id="options" name="options" value="${currentQuestion.option4}" />
-      <label class="option" for="forth">${currentQuestion.option4}</label><br /><br />
-    `;
+    <div class="input-Div-js" "><input id="option1" class="input" onchange='handleChange1()' type='radio' class='input' name='option' value='${currentQuestion.option1}'>
+    <label class="radio-label" for='option1'>${currentQuestion.option1}</label></div><br>
+    <div class="input-Div-js"><input id="option2" class="input" onchange='handleChange1()' type='radio' class='input' name='option' value='${currentQuestion.option2}'>
+    <label class="radio-label" for='option2'>${currentQuestion.option2}</label></div><br>
+    <div class="input-Div-js"><input id="option3" class="input" onchange='handleChange1()' type='radio' class='input' name='option' value='${currentQuestion.option3}'>
+    <label class="radio-label" for='option3'>${currentQuestion.option3}</label></div><br>
+    <div class="input-Div-js"><input id="option4" class="input" onchange='handleChange1()' type='radio' class='input' name='option' value='${currentQuestion.option4}'>
+    <label class="radio-label" for='option4'>${currentQuestion.option4}</label></div><br>
+  
+  `;
 
   nextBtn.style.display = "none";
 }
@@ -129,36 +122,35 @@ function reviewBtn() {
     selected = answerss[i];
 
     reviewDiv.innerHTML += `
-  <p>Q${i + 1}.${questions[i].question}</p>
+  <p><b>Q${i + 1}.${questions[i].question}</b></p>
 
-  <p  style="color:${getColor(questions[i].option1, i)}" >A) <b>${
+  <p  style="color:${getColor(questions[i].option1, i)}" >A) ${
       questions[i].option1
-    }.</b>
+    }.
   
   
-  <p  style="color:${getColor(questions[i].option2, i)}" >B) <b>${
+  <p  style="color:${getColor(questions[i].option2, i)}" >B) ${
       questions[i].option2
-    }.</b>
+    }.
 
 
-  <p  style="color:${getColor(questions[i].option3, i)}"  >C) <b>${
+  <p  style="color:${getColor(questions[i].option3, i)}"  >C) ${
       questions[i].option3
-    }.</b>
+    }.
 
 
-  <p  style="color:${getColor(questions[i].option4, i)}"  >D) <b>${
+  <p  style="color:${getColor(questions[i].option4, i)}"  >D) ${
       questions[i].option4
-    }.</b>
+    }.
 
 
-  <p> <b style="color:green">${questions[i].answer} (correct).</b><br>
+  <p> <b style="color:green">${questions[i].answer} (correct).</b><br><br><br>
   
 `;
   }
 
   function getColor(option, index) {
-    if (selected == option && option == questions[index].answer)
-      return "green";
+    if (selected == option && option == questions[index].answer) return "green";
     else if (selected == option && selected != questions[index].answer)
       return "red";
     else if (option == questions[index].answer) return "green";
@@ -169,6 +161,6 @@ function reviewBtn() {
 }
 
 function closeButtonReviewDiv() {
-  window.location.href="/Firas/mainCards/firasCards.html";
+  window.location.href = "/Firas/mainCards/firasCards.html";
   reviewDiv.style.display = "none";
 }

@@ -20,16 +20,16 @@ async function readTestData() {
   }`;
   options.innerHTML = "";
   options.innerHTML = `
-        <input id="option1" class="radio-button" onchange='next()' type='radio' class='input' name='option' value='${currentQuestion.option1}'>
-        <label class="radio-label" for='option1'>${currentQuestion.option1}</label><br><br>
-        <input id="option2" class="radio-button" onchange='next()' type='radio' class='input' name='option' value='${currentQuestion.option2}'>
-        <label class="radio-label" for='option2'>${currentQuestion.option2}</label><br><br>
-        <input id="option3" class="radio-button" onchange='next()' type='radio' class='input' name='option' value='${currentQuestion.option3}'>
-        <label class="radio-label" for='option3'>${currentQuestion.option3}</label><br><br>
-        <input id="option4" class="radio-button" onchange='next()' type='radio' class='input' name='option' value='${currentQuestion.option4}'>
-        <label class="radio-label" for='option4'>${currentQuestion.option4}</label><br><br>
-    
-    `;
+  <div class="input-Div-js"><input id="option1" class="input" onchange='next()' type='radio' class='input' name='option' value='${currentQuestion.option1}'>
+  <label class="radio-label" for='option1'>${currentQuestion.option1}</label></div><br>
+  <div class="input-Div-js"><input id="option2" class="input" onchange='next()' type='radio' class='input' name='option' value='${currentQuestion.option2}'>
+  <label class="radio-label" for='option2'>${currentQuestion.option2}</label></div><br>
+  <div class="input-Div-js"><input id="option3" class="input" onchange='next()' type='radio' class='input' name='option' value='${currentQuestion.option3}'>
+  <label class="radio-label" for='option3'>${currentQuestion.option3}</label></div><br>
+  <div class="input-Div-js"><input id="option4" class="input" onchange='next()' type='radio' class='input' name='option' value='${currentQuestion.option4}'>
+  <label class="radio-label" for='option4'>${currentQuestion.option4}</label></div><br>
+
+`;
 }
 
 function next() {
@@ -97,15 +97,15 @@ function NextBtn() {
   }`;
   options.innerHTML = "";
 
-    options.innerHTML = `
-    <input id="option1" class="radio-button" onchange='next()' type='radio' class='input' name='option' value='${currentQuestion.option1}'>
-    <label class="radio-label" for='option1'>${currentQuestion.option1}</label><br><br>
-    <input id="option2" class="radio-button" onchange='next()' type='radio' class='input' name='option' value='${currentQuestion.option2}'>
-    <label class="radio-label" for='option2'>${currentQuestion.option2}</label><br><br>
-    <input id="option3" class="radio-button" onchange='next()' type='radio' class='input' name='option' value='${currentQuestion.option3}'>
-    <label class="radio-label" for='option3'>${currentQuestion.option3}</label><br><br>
-    <input id="option4" class="radio-button" onchange='next()' type='radio' class='input' name='option' value='${currentQuestion.option4}'>
-    <label class="radio-label" for='option4'>${currentQuestion.option4}</label><br><br>
+  options.innerHTML = `
+  <div class="input-Div-js"><input id="option1" class="input" onchange='next()' type='radio' class='input' name='option' value='${currentQuestion.option1}'>
+  <label class="radio-label" for='option1'>${currentQuestion.option1}</label></div><br>
+  <div class="input-Div-js"><input id="option2" class="input" onchange='next()' type='radio' class='input' name='option' value='${currentQuestion.option2}'>
+  <label class="radio-label" for='option2'>${currentQuestion.option2}</label></div><br>
+  <div class="input-Div-js"><input id="option3" class="input" onchange='next()' type='radio' class='input' name='option' value='${currentQuestion.option3}'>
+  <label class="radio-label" for='option3'>${currentQuestion.option3}</label></div><br>
+  <div class="input-Div-js"><input id="option4" class="input" onchange='next()' type='radio' class='input' name='option' value='${currentQuestion.option4}'>
+  <label class="radio-label" for='option4'>${currentQuestion.option4}</label></div><br>
 
 `;
 
@@ -124,29 +124,29 @@ function reviewBtn() {
   for (let i = 0; i < answerss.length; i++) {
     selected = answerss[i];
     reviewDiv.innerHTML += `
-  <p>Q${i + 1}.${questions[i].question}</p>
+  <p><b>Q${i + 1}.${questions[i].question}</b></p>
 
-  <p  style="color:${getColor(questions[i].option1, i)}" >A) <b>${
+  <p  style="color:${getColor(questions[i].option1, i)}" >A) ${
       questions[i].option1
-    }.</b>
+    }.
   
   
-  <p  style="color:${getColor(questions[i].option2, i)}" >B) <b>${
+  <p  style="color:${getColor(questions[i].option2, i)}" >B) ${
       questions[i].option2
-    }.</b>
+    }.
 
 
-  <p  style="color:${getColor(questions[i].option3, i)}"  >C) <b>${
+  <p  style="color:${getColor(questions[i].option3, i)}"  >C) ${
       questions[i].option3
-    }.</b>
+    }.
 
 
-  <p  style="color:${getColor(questions[i].option4, i)}"  >D) <b>${
+  <p  style="color:${getColor(questions[i].option4, i)}"  >D) ${
       questions[i].option4
-    }.</b>
+    }.
 
 
-  <p> <b style="color:green">${questions[i].answer} (correct).</b><br>
+  <p> <b style="color:green">${questions[i].answer} (correct).</b><br><br><br>
   
 `;
   }
