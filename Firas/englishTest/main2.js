@@ -22,14 +22,14 @@ async function readTestData() {
   }`;
   options.innerHTML = "";
   options.innerHTML = `
-        <input onchange='next()' type='radio' class='input' name='option' value='${currentQuestion.option1}'>
-        <label for='option'>${currentQuestion.option1}</label><br><br>
-        <input onchange='next()' type='radio' class='input' name='option' value='${currentQuestion.option2}'>
-        <label for='option'>${currentQuestion.option2}</label><br><br>
-        <input onchange='next()' type='radio' class='input' name='option' value='${currentQuestion.option3}'>
-        <label for='option'>${currentQuestion.option3}</label><br><br>
-        <input onchange='next()' type='radio' class='input' name='option' value='${currentQuestion.option4}'>
-        <label for='option'>${currentQuestion.option4}</label><br><br>
+        <input id="option1" class="radio-button" onchange='next()' type='radio' class='input' name='option' value='${currentQuestion.option1}'>
+        <label class="radio-label" for='option1'>${currentQuestion.option1}</label><br><br>
+        <input id="option2" class="radio-button" onchange='next()' type='radio' class='input' name='option' value='${currentQuestion.option2}'>
+        <label class="radio-label" for='option2'>${currentQuestion.option2}</label><br><br>
+        <input id="option3" class="radio-button" onchange='next()' type='radio' class='input' name='option' value='${currentQuestion.option3}'>
+        <label class="radio-label" for='option3'>${currentQuestion.option3}</label><br><br>
+        <input id="option4" class="radio-button" onchange='next()' type='radio' class='input' name='option' value='${currentQuestion.option4}'>
+        <label class="radio-label" for='option4'>${currentQuestion.option4}</label><br><br>
     
     `;
 }
@@ -101,14 +101,14 @@ localStorage.setItem('EngQuizTaken',true);
   options.innerHTML = "";
 
   options.innerHTML = `
-        <input onchange='next()' type='radio' class='input' name='option' value='${currentQuestion.option1}'>
-        <label for='option'>${currentQuestion.option1}</label><br><br>
-        <input onchange='next()' type='radio' class='input' name='option' value='${currentQuestion.option2}'>
-        <label for='option'>${currentQuestion.option2}</label><br><br>
-        <input onchange='next()' type='radio' class='input' name='option' value='${currentQuestion.option3}'>
-        <label for='option'>${currentQuestion.option3}</label><br><br>
-        <input onchange='next()' type='radio' class='input' name='option' value='${currentQuestion.option4}'>
-        <label for='option'>${currentQuestion.option4}</label><br><br>
+        <input id="option1" class="radio-button" onchange='next()' type='radio' class='input' name='option' value='${currentQuestion.option1}'>
+        <label class="radio-label" for='option1'>${currentQuestion.option1}</label><br><br>
+        <input id="option2" class="radio-button" onchange='next()' type='radio' class='input' name='option' value='${currentQuestion.option2}'>
+        <label class="radio-label" for='option2'>${currentQuestion.option2}</label><br><br>
+        <input id="option3" class="radio-button" onchange='next()' type='radio' class='input' name='option' value='${currentQuestion.option3}'>
+        <label class="radio-label" for='option3'>${currentQuestion.option3}</label><br><br>
+        <input id="option4" class="radio-button" onchange='next()' type='radio' class='input' name='option' value='${currentQuestion.option4}'>
+        <label class="radio-label" for='option4'>${currentQuestion.option4}</label><br><br>
     
     `;
   nextBtn.style.display = "none";
@@ -171,3 +171,4 @@ function closeButtonReviewDiv() {
   window.location.href="/Firas/mainCards/firasCards.html";
   reviewDiv.style.display = "none";
 }
+
