@@ -342,14 +342,9 @@ body {
  @media screen and (max-width: 426px) {
 
   .container {
-    background-color: #fff;
-    border-radius: 50px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
-    position: relative;
-    overflow: hidden;
-    width: 800px;
+    width: 400px;
     max-width: 100%;
-    min-height: 650px;
+    min-height: 450px;
   }
   
   .sign-up{
