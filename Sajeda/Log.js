@@ -17,8 +17,8 @@ function login(event) {
 
   event.preventDefault();
 
-  let user = document.getElementById("username").value;
-  let checkuser = localStorage.getItem("username");
+  // let user = document.getElementById("username").value;
+  // let checkuser = localStorage.getItem("username");
 
   let userPassword = document.getElementById("password").value;
   let checkPassword = localStorage.getItem("password");
@@ -28,7 +28,7 @@ function login(event) {
 
   let Invalide = document.getElementById("fncheck");
 
-  if ((user === checkuser || email === checkemail) && (userPassword === checkPassword)) {
+  if (( email === checkemail) && (userPassword === checkPassword)) {
     
     isLoggedIn = true;
     window.location.replace("home.html");
@@ -43,25 +43,6 @@ function login(event) {
     return isLoggedIn;
 }
 
-
-
-function signup(event){
-    event.preventDefault();
-
-    let name = document.getElementById("username").value;
-    localStorage.setItem("username", name);
-    
-    let email = document.getElementById("email").value;
-    localStorage.setItem("email", email);
-
-    let password = document.getElementById("password").value;
-    localStorage.setItem("password", password);
-  
-
-    let submit = document.getElementById("signbutton").value;
-    localStorage.setItem("signbutton", submit);
-   
-}
 
 
 
@@ -95,6 +76,8 @@ function signup(event){
 
   let submit = document.getElementById("signbutton").value;
   localStorage.setItem("signbutton", submit);
+
+  window.alert("Thank you for registering with us");
  
 }
 

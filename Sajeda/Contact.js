@@ -23,6 +23,7 @@ function storeform(event){
     let submit = document.getElementById("submit").value;
     sessionStorage.setItem("submit", submit);
     
+    window.alert("Thank you for your feedback");
 
     // confirmation();
 }
@@ -44,3 +45,40 @@ accordions.forEach(accordion => {
         }
     })
 });
+
+
+
+// Function to handle login toggle
+window.onload = function () {
+    const logginuser = sessionStorage.getItem('isLoggedIn');
+    debugger
+  
+    if (logginuser == "true") {
+  
+      document.getElementById("login-button").className = "nav_none";
+      document.getElementById("logout-button").className = "nav_block";
+      document.getElementById("profile-icon").className = "nav_block";
+  
+    }
+    else {
+      document.getElementById("login-button").className = "nav_block";
+      document.getElementById("logout-button").className = "nav_none";
+      document.getElementById("profile-icon").className = "nav_none";
+    }
+  
+  
+  
+  }
+  
+  
+  // window.onload = updateLoginStatus();
+  
+  
+  function logoutBTN() {
+    debugger
+    sessionStorage.isLoggedIn = "false";
+  
+    document.getElementById("login-button").className = "nav_block";
+    document.getElementById("logout-button").className = "nav_none";
+    document.getElementById("profile-icon").className = "nav_none";
+  }
