@@ -53,6 +53,7 @@ function NextQ() {
     ShowResult();      // Show the results
   }
 }
+  document.getElementById("next-button").addEventListener("click", NextQ);
 
 function ShowResult() {
   const FinalResult = document.getElementById("result");
@@ -99,11 +100,19 @@ function ViewMore() {
         The Correct Answer: ${question.correct_answer}<br><br>
       `;
   
-     
+      show.appendChild(result);
     });
   
+    let store={
+      userchoises:UserChoices,
+      question:quizData.map(question=>question.question),
+      correctanswer:quizData.map(question=>question.correct_answer)
+    };
+localStorage.setItem("REVIEW",JSON.stringify(store))
+
+
     show.style.display = "block"; // Show the 'detais' section
   }
-  document.getElementById("next-button").addEventListener("click", NextQ);
+ 
 
 

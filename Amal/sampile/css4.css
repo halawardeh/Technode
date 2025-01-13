@@ -1,13 +1,29 @@
 
 
 
-/* From Uiverse.io by eslam-hany */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .card {
-    margin-top: 20vw;
+    margin-top: 5.5vw;
     position: relative;
     width: 90vw;
-    height: 50vw;
-    background: #DCE4C9;
+    height: 30vw;
+    background: #e07c39b9;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,7 +45,7 @@
     justify-content: center;
     font-size: 25px;
     font-weight: bold;
-    background-color: #F5F5DC;
+    background-color: orange;
     transition: all 0.5s;
   }
   
@@ -84,14 +100,14 @@
 }
 .card1:hover{
     background-color: #e07c39b9;
-    transform: scale(1.5);
+    transform: scale(1.1);
    
 
 }
 .card-img-top{
-    width: 8vw;
+    width: 20vw;
     height: 12vw;
-    padding-left:7vw;
+    padding-left:1vw;
     margin-top: 1vw;
 }
 
@@ -99,7 +115,7 @@
     font-size: 2vw;
     margin-top: -6vw;
     padding-top: 5vw;
-    margin-left: 6vw;
+    margin-left: 5vw;
     margin-left: 8vw;
 }
 .btn {
@@ -110,7 +126,7 @@
     margin-left: 2.5vw;
     border: 0.5px solid black;
     border-radius: 6vw;
-    background-color:#E07B39 ;
+    background-color:#eb7322 ;
     color: white;
     cursor: pointer;
 }
@@ -125,6 +141,8 @@
     background-color:orange;
     border: 0.01px solid black;
     border-radius: 6vw;
+    margin-left: 12vw;
+    margin-top: -5vw;
 }
 
 /* ******second card******** */
@@ -138,31 +156,32 @@
 }
 .card2:hover{
     background-color: #e07c39b9;
-    transform: scale(1.5);
+    transform: scale(1.1);
 } 
 
 .card2-img-top{
-    width: 8vw;
+    width: 20vw;
     height: 12vw;
-    padding-left:7vw;
+    padding-left:3vw;
     margin-top: 1vw;
+    margin-left: -1.5vw;
 }
 .card2-title{
     font-size: 2vw;
     margin-top: -6vw;
     padding-top: 5vw;
     padding-left: 0vw;
-    margin-left: 5vw;
+    margin-left: 6vw;
 }
 .btn2 {
     width: 8vw;
     height: 5vw;
     font-size: 1vw;
     margin-top: 1vw;
-    margin-left: 3.5vw;
+    margin-left: 1.5vw;
     border: 0.5px solid black;
     border-radius: 6vw;
-    background-color: #E07B39 ;
+    background-color: #ffb732;
     color: white;
     cursor: pointer;
 }
@@ -177,6 +196,8 @@
     background-color:orange ;
     border: 0.01px solid black;
     border-radius: 6vw;
+    margin-left: 12vw;
+    margin-top: -5vw;
 }
 /* *********third card******* */
 .card3{
@@ -189,13 +210,14 @@
 }
 .card3:hover{
     background-color: #e07c39b9;
-    transform: scale(1.5);
+    transform: scale(1.1);
 }
 .card3-img-top{
-    width: 8vw;
+    width: 20vw;
     height: 12vw;
-    padding-left:7vw;
+    padding-left:1.5vw;
     margin-top: 1vw;
+    
 }
 .card3-title{
     font-size: 2vw;
@@ -210,10 +232,10 @@
     height: 5vw;
     font-size: 1vw;
     margin-top: 1vw;
-    margin-left: 3.5vw;
+    margin-left: 1.5vw;
     border: 0.5px solid black;
     border-radius: 6vw;
-    background-color:#E07B39 ;
+    background-color:#ffb732 ;
     color: white;
     cursor: pointer;
 }
@@ -228,10 +250,18 @@
     background-color:orange;
     border: 0.01px solid black;
     border-radius: 6vw;
+    margin-left: 12vw;
+    margin-top: -5vw;
 }
 /* *****flex*** */
 .fflex{
-    margin-top: 10vw;
+    margin-top: 5vw;
     display: flex;
     justify-content: space-between;
 }
+
+
+/* footer */
+
+
+
