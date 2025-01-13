@@ -11,8 +11,46 @@ loginbtn.addEventListener("click", () => {
 });
 
 
+<<<<<<< HEAD
+// let isLoggedIn = false;
+
+function login(event) {
+
+  event.preventDefault();
+
+  let user = document.getElementById("username").value;
+  let checkuser = localStorage.getItem("username");
+
+  let userPassword = document.getElementById("password").value;
+  let checkPassword = localStorage.getItem("password");
+
+  let email = document.getElementById("email").value;
+  let checkemail = localStorage.getItem("email");
+
+  let Invalide = document.getElementById("fncheck");
+
+  if ((user === checkuser || email === checkemail) && (userPassword === checkPassword)) {
+    
+    // isLoggedIn = true;
+    window.location.replace("home.html");
+    
+    
+
+  }
+
+  else
+    Invalide.innerHTML = "Invalide username or password";
+
+    // return isLoggedIn;
+}
+
+
+
+function signup(event){
+=======
 function login(event){
 
+>>>>>>> 653f8846d69aa63d2cc306347f2788a29b2841fb
     event.preventDefault();
 
     let user = document.getElementById("username").value;
@@ -151,9 +189,29 @@ function confirmpassword(){
 
 
 
+<<<<<<< HEAD
+// function checkphone(){
+//     let vphone = document.getElementById("phoneNumber").value;
+//     let phoneerror = document.getElementById("phonecheck");
+//     const phonePattern = /^[0-9]+$/; 
+
+//     if(!phonePattern.test(vphone)){
+//         phoneerror.innerHTML = "Please enter a valid phone number (only numbers are allowed)";
+//     }
+//     else{
+//         phoneerror.innerHTML = "";}
+
+//  }
+
+
+
+function bdatevalidation() {
+  let vdate = document.getElementById("birthDate").value;
+=======
 
 function bdatevalidation(){
   let vdate= document.getElementById("birthDate").value;
+>>>>>>> 653f8846d69aa63d2cc306347f2788a29b2841fb
   let dateerror = document.getElementById("dcheck");
   const regexdate = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/[0-9]{4}$/;
 

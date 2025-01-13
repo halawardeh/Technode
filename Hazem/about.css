@@ -1,103 +1,219 @@
-/* General Styles */
+/* تنسيق عام */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: #f5f5dc;
-    /* خلفية رمادية بالكامل */
+    background: white;
     color: #333;
+    line-height: 1.6;
 }
 
-/* Section Styling */
+/* Hero Section */
+.hero-section {
+    background-image: url('https://via.placeholder.com/1500'); /* استبدل بالصورة الخاصة بك */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* طبقة داكنة فوق الصورة */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.cta-button {
+    background-color: #f4a261;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e76f51;
+    transform: translateY(-5px);
+}
+
+/* تصميم الأقسام */
 .section {
     width: 90%;
     max-width: 1100px;
-    margin: 20px auto;
-    padding: 20px;
-    background: white;
-    /* خلفية بيضاء للمحتوى */
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    padding: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* ظل أكثر وضوحًا */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
 }
 
 .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 40px;
 }
 
-.text-left {
+.text-left,
+.text-right {
     width: 50%;
-    padding-left: 20px;
+    padding: 0 20px;
 }
 
-.text-left h2 {
-    font-size: 1.8rem;
+.text-left h2,
+.text-right h2 {
+    font-size: 2rem;
     margin-bottom: 10px;
+    color: #333;
 }
 
 .text-left p,
-.text-left ul {
+.text-left ul,
+.text-right p,
+.text-right ul {
     font-size: 1.1rem;
     line-height: 1.8;
+    color: #555;
 }
 
-.text-left ul {
+.text-left ul,
+.text-right ul {
     list-style-type: disc;
     padding-left: 20px;
 }
 
-.right-image {
+.right-image,
+.left-image {
     width: 50%;
     height: auto;
     border-radius: 8px;
     object-fit: cover;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    border: 5px solid white; /* إطار للصور */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Quote Styling */
+.right-image:hover,
+.left-image:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* اقتباس */
 .quote {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 200px;
-    /* ارتفاع ثابت */
     font-size: 1.5rem;
     font-style: italic;
-    color: #555;
+    color: #333; /* لون النصوص داكن */
     margin-top: 50px;
+    background: white; /* خلفية بيضاء */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* ظل قوي */
+    position: relative;
+    overflow: hidden;
+    border: 2px dashed #f4a261; /* إطار متقطع */
 }
 
-/* Media Queries for Responsiveness */
+.quote::before {
+    content: '“';
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    font-size: 6rem;
+    color: #f4a261; /* لون الأيقونة */
+    opacity: 0.2;
+}
+
+.quote::after {
+    content: '”';
+    position: absolute;
+    bottom: -40px;
+    right: 20px;
+    font-size: 6rem;
+    color: #f4a261; /* لون الأيقونة */
+    opacity: 0.2;
+}
+
+.quote p {
+    position: relative;
+    z-index: 1;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* ظل خفيف للنص */
+    letter-spacing: 1px; /* زيادة المسافة بين الحروف */
+}
+
+/* تحسين العرض للشاشات الصغيرة */
 @media (max-width: 768px) {
     .section {
         flex-direction: column;
+        padding: 20px;
     }
 
     .container {
         flex-direction: column;
         align-items: center;
+        gap: 20px;
     }
 
-    .text-left {
+    .text-left,
+    .text-right {
         width: 100%;
-        padding-left: 0;
+        padding: 0;
         text-align: center;
     }
 
-    .right-image {
+    .right-image,
+    .left-image {
         width: 100%;
-        margin-top: 5px;
+        margin-top: 10px;
     }
-}
 
-.who-we-are-image {
-    width: 40%;
-    /* نفس نسبة العرض للصورة اللي قبل  */
-    height: auto;
-    /* حتى احافظ على التناسب */
-    border-radius: 8px;
-    object-fit: cover;
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .quote {
+        padding: 20px;
+        font-size: 1.2rem;
+    }
+
+    .quote::before,
+    .quote::after {
+        font-size: 4rem;
+    }
 }

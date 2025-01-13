@@ -1,8 +1,9 @@
 document.querySelector("#registrationForm").addEventListener("submit", function (event) {
-    event.preventDefault(); 
+    event.preventDefault();
 
     // استحضار  القيم من الحقول
-    const fullName = document.querySelector("#fullName").value;
+    const FirstName = document.getElementById("firstName").value;
+    const LastName = document.getElementById("LastName").value;
     const phoneNumber = document.querySelector("#phoneNumber").value;
     const birthDate = document.querySelector("#birthDate").value;
     const gender = document.querySelector('input[name="gender"]:checked').nextElementSibling.textContent;
@@ -12,7 +13,7 @@ document.querySelector("#registrationForm").addEventListener("submit", function 
 
     // تاكد من صحة البيانات
     const namePattern = /^[A-Za-z\s]+$/; // فقط أحرف ومسافات
-    if (!namePattern.test(fullName)) {
+    if (!namePattern.test(FirstName)) {
         alert("Please enter a valid name (only letters and spaces are allowed).");
         return;
     }
@@ -30,18 +31,16 @@ document.querySelector("#registrationForm").addEventListener("submit", function 
     }
 
     // تخزين البيانات في Local Storage
-    const userData = {
-        fullName: fullName,
-        phoneNumber: phoneNumber,
-        birthDate: birthDate,
-        gender: gender,
-        address: address,
-        country: country,
-        city: city,
-    };
+    
 
-    // تحويل object  إلى JSON وحفظه
-    localStorage.setItem("userData", JSON.stringify(userData));
+    localStorage.setItem('FirstName',FirstName);
+    localStorage.setItem('LastName',LastName);
+    localStorage.setItem('#phoneNumber',phoneNumber);
+    localStorage.setItem('#birthDate',birthDate);
+    localStorage.setItem('input[name="gender"]:checked','input[name="gender"]:checked');
+    localStorage.setItem('#address',address);
+    localStorage.setItem('#country',country);
+    localStorage.setItem('#city',city);
 
     alert("Data saved successfully!");
 
