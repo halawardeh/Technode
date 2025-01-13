@@ -12,60 +12,62 @@ loginbtn.addEventListener("click", () => {
 
 
 let isLoggedIn = false;
-
+if (  localStorage.getItem("isLoggedIn")) {
+  
+    isLoggedIn = true;
+  
+}
 function login(event) {
 
   event.preventDefault();
 
-  let user = document.getElementById("username").value;
-  let checkuser = localStorage.getItem("username");
+
+  // let user = document.getElementById("username").value;
+  // let checkuser = localStorage.getItem("username");
 
   let userPassword = document.getElementById("password").value;
+  console.log(userPassword);
+  
   let checkPassword = localStorage.getItem("password");
 
   let email = document.getElementById("email").value;
   let checkemail = localStorage.getItem("email");
+  console.log(email);
+  
 
   let Invalide = document.getElementById("fncheck");
 
-  if ((user === checkuser || email === checkemail) && (userPassword === checkPassword)) {
-    
-    isLoggedIn = true;
-    window.location.replace("home.html");
-    
-    
+  if (( email == checkemail) && (userPassword == checkPassword)) {
 
+    sessionStorage.setItem("isLoggedIn", "true"); // Set login state
+    window.location.replace("../Hala/index.html");
+  } else {
+    Invalide.innerHTML = "Invalid username or password";
   }
+}
 
-  else
-    Invalide.innerHTML = "Invalide username or password";
 
-    return isLoggedIn;
+function signup(event) {
+  event.preventDefault();
+
+  let name = document.getElementById("username").value;
+  localStorage.setItem("username", name);
+
+  let email = document.getElementById("email").value;
+  localStorage.setItem("email", email);
+
+  let password = document.getElementById("password").value;
+  localStorage.setItem("password", password);
+
+
+  let submit = document.getElementById("signbutton").value;
+  localStorage.setItem("signbutton", submit);
+
 }
 
 
 
-function signup(event){
-    event.preventDefault();
-
-    let name = document.getElementById("username").value;
-    localStorage.setItem("username", name);
-    
-    let email = document.getElementById("email").value;
-    localStorage.setItem("email", email);
-
-    let password = document.getElementById("password").value;
-    localStorage.setItem("password", password);
-  
-
-    let submit = document.getElementById("signbutton").value;
-    localStorage.setItem("signbutton", submit);
-   
-}
-
-
-
-function signup(event){
+function signup(event) {
   event.preventDefault();
 
   let firstname = document.getElementById("firstName").value;
@@ -83,7 +85,7 @@ function signup(event){
 
   let email = document.getElementById("email").value;
   localStorage.setItem("email", email);
-  
+
 
   let city = document.getElementById("city").value;
   localStorage.setItem("city", city);
@@ -95,7 +97,7 @@ function signup(event){
 
   let submit = document.getElementById("signbutton").value;
   localStorage.setItem("signbutton", submit);
- 
+
 }
 
 
@@ -103,34 +105,34 @@ function signup(event){
 
 function namevalidation() {
 
-  let vname= document.getElementById("firstName").value;
-  let nameerror= document.getElementById("fncheck");
-  let ragname= /^[a-zA-Z]+$/;
-  if(!ragname.test(vname)){
-      // nameerror.innerHTML = "Numbers are not allowed"
-      // return false;
-      nameerror.innerHTML = "Numbers are not allowed";
-     }
-  else{
-      nameerror.innerHTML = "";
-    
+  let vname = document.getElementById("firstName").value;
+  let nameerror = document.getElementById("fncheck");
+  let ragname = /^[a-zA-Z]+$/;
+  if (!ragname.test(vname)) {
+    // nameerror.innerHTML = "Numbers are not allowed"
+    // return false;
+    nameerror.innerHTML = "Numbers are not allowed";
+  }
+  else {
+    nameerror.innerHTML = "";
+
   }
 }
 
 
 function lastnamevalidation() {
 
-  let vlname= document.getElementById("lastName").value;
-  let lnameerror= document.getElementById("lncheck");
-  let raglname= /^[a-zA-Z]+$/;
-  if(!raglname.test(vlname)){
-      // nameerror.innerHTML = "Numbers are not allowed"
-      // return false;
-      lnameerror.innerHTML = "Numbers are not allowed";
-    }
-  else{
-      lnameerror.innerHTML = "";
-     
+  let vlname = document.getElementById("lastName").value;
+  let lnameerror = document.getElementById("lncheck");
+  let raglname = /^[a-zA-Z]+$/;
+  if (!raglname.test(vlname)) {
+    // nameerror.innerHTML = "Numbers are not allowed"
+    // return false;
+    lnameerror.innerHTML = "Numbers are not allowed";
+  }
+  else {
+    lnameerror.innerHTML = "";
+
   }
 }
 
@@ -189,4 +191,7 @@ function bdatevalidation() {
     dateerror.innerHTML = "";
   }
 }
+
+
+
 
