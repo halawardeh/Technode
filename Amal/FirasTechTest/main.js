@@ -4,10 +4,10 @@ const nextBtn = document.getElementById("next");
 
 const questionElement = document.getElementById("question");
 let options = document.getElementById("options");
-let reviewDiv = document.getElementById("reviewDivTech");
+let reviewDiv = document.getElementById("reviewDiv");
 
 let selected;
-let answerTech = [];
+let answer = [];
 let currentQuestion;
 let counter = 0;
 let scour = 0;
@@ -43,8 +43,9 @@ function handleChange1() {
 }
 
 function nextQ() {
-  answerTech.push(document.querySelector('input[name="options"]:checked').value);
+  answer.push(document.querySelector('input[name="options"]:checked').value);
 
+  console.log("The answer is from array  : " + answer);
 
   counter++;
 
@@ -63,9 +64,7 @@ function nextQ() {
   console.log(scour);
 
   if (counter >= questions.length) {
-    localStorage.setItem("answersTech", JSON.stringify(answerTech));
-    localStorage.setItem("TechQuizTaken",true);
-
+    localStorage.setItem("answers1", JSON.stringify(answer));
 
     alert("Your finish You Exam.. ." + scour);
     if (scour < 8) {
@@ -123,7 +122,7 @@ function closeBtn() {
   card.style.display = "none";
 }
 function reviewBtn() {
-  let answerss = JSON.parse(localStorage.getItem("answersTech"));
+  let answerss = JSON.parse(localStorage.getItem("answers1"));
 
   for (let i = 0; i < answerss.length; i++) {
     selected = answerss[i];
@@ -151,17 +150,17 @@ function reviewBtn() {
     }.</b>
 
 
-  <p> <b style="color:green">${questions[i].answer} (correct).</b><br>
+  <p> <b style="color:green">${questions[i].currect} (correct).</b><br>
   
 `;
   }
 
   function getColor(option, index) {
-    if (selected == option && option == questions[index].answer)
+    if (selected == option && option == questions[index].currect)
       return "green";
-    else if (selected == option && selected != questions[index].answer)
+    else if (selected == option && selected != questions[index].currect)
       return "red";
-    else if (option == questions[index].answer) return "green";
+    else if (option == questions[index].currect) return "green";
     else return "black";
   }
 
@@ -169,6 +168,5 @@ function reviewBtn() {
 }
 
 function closeButtonReviewDiv() {
-  window.location.href="/Firas/mainCards/firasCards.html";
   reviewDiv.style.display = "none";
 }

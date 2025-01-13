@@ -6,9 +6,8 @@ let nextBtn = document.getElementById("next-button");
 let counter = 0;
 let scourIq = 0;
 let currentQuestion;
-let reviewDiv = document.getElementById("reviewDiv");
 let selected;
-let answer = [];
+let answerIq = [];
 
 async function readTestData() {
   let response = await fetch("iqTest.json");
@@ -38,7 +37,7 @@ function next() {
 }
 
 function NextBtn() {
-  answer.push(document.querySelector('input[name="option"]:checked').value);
+  answerIq.push(document.querySelector('input[name="option"]:checked').value);
 
   counter++;
 
@@ -58,7 +57,8 @@ function NextBtn() {
   console.log("Your scour: " + scourIq);
 
   if (counter > questions.length - 1) {
-    localStorage.setItem("answers2", JSON.stringify(answer));
+    localStorage.setItem("answersIq", JSON.stringify(answerIq));
+    localStorage.setItem("IqQuizTaken", true);
 
     alert("Your finish You Exam.. ." + scourIq);
     if (scourIq < 5) {
@@ -113,10 +113,12 @@ function NextBtn() {
 
 function closeBtn() {
   card.style.display = "none";
+  window.location.href = "/Firas/mainCards/firasCards.html";
 }
 
 function reviewBtn() {
-  let answerss = JSON.parse(localStorage.getItem("answers2"));
+  let answerss = JSON.parse(localStorage.getItem("answersIq"));
+  localStorage.setItem('IqQuizTaken',true);
 
   for (let i = 0; i < answerss.length; i++) {
     selected = answerss[i];
@@ -160,5 +162,7 @@ function reviewBtn() {
 }
 
 function closeButtonReviewDiv() {
+  window.location.href="/Firas/mainCards/firasCards.html";
+
   reviewDiv.style.display = "none";
 }

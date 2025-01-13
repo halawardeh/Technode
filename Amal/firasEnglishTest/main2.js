@@ -6,10 +6,10 @@ let nextBtn = document.getElementById("next-button");
 let counter = 0;
 let scourEng = 0;
 let currentQuestion;
-let reviewDiv = document.getElementById("reviewDivEng");
+let reviewDiv = document.getElementById("reviewDiv");
 
 let selected;
-let answerEng = [];
+let answer = [];
 
 async function readTestData() {
   let response = await fetch("english.json");
@@ -39,12 +39,12 @@ function next() {
 }
 
 function NextBtn() {
-  answerEng.push(document.querySelector('input[name="option"]:checked').value);
+  answer.push(document.querySelector('input[name="option"]:checked').value);
 
   counter++;
 
   if (
-    currentQuestion.answer ==
+    currentQuestion.correct ==
     document.querySelector('input[name="option"]:checked').value
   ) {
     scourEng++;
@@ -55,13 +55,11 @@ function NextBtn() {
       document.querySelector('input[name="option"]:checked').value
   );
 
-  console.log("The correct: " + currentQuestion.answer);
-  console.log("Your scour: " + scourEng);
+  console.log("The correct: " + currentQuestion.correct);
+  console.log("Your scour: " + scourEng);ABUMALLOH
 
   if (counter > questions.length - 1) {
-    localStorage.setItem("answersEng", JSON.stringify(answerEng));
-
-localStorage.setItem('EngQuizTaken',true);
+    localStorage.setItem("answers3", JSON.stringify(answer));
 
     alert("Your finish You Exam.. ." + scourEng);
     if (scourEng < 5) {
@@ -119,7 +117,7 @@ function closeBtn() {
 }
 
 function reviewBtn() {
-  let answerss = JSON.parse(localStorage.getItem("answersEng"));
+  let answerss = JSON.parse(localStorage.getItem("answers3"));
 
   for (let i = 0; i < answerss.length; i++) {
     selected = answerss[i];
@@ -147,7 +145,7 @@ function reviewBtn() {
     }.</b>
 
 
-  <p> <b style="color:green">${questions[i].answer} (correct).</b><br>
+  <p> <b style="color:green">${questions[i].correct} (correct).</b><br>
   
 `;
   }
@@ -156,11 +154,11 @@ function reviewBtn() {
     console.log(selected);
     const currentQuestion22 = questions[index];
 
-    if (selected == option && option == currentQuestion22.answer)
+    if (selected == option && option == currentQuestion22.correct)
       return "green";
-    else if (selected == option && selected != currentQuestion22.answer)
+    else if (selected == option && selected != currentQuestion22.correct)
       return "red";
-    else if (option == currentQuestion22.answer) return "green";
+    else if (option == currentQuestion22.correct) return "green";
     else return "black";
   }
 
@@ -168,6 +166,5 @@ function reviewBtn() {
 }
 
 function closeButtonReviewDiv() {
-  window.location.href="/Firas/mainCards/firasCards.html";
   reviewDiv.style.display = "none";
 }

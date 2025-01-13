@@ -107,8 +107,3 @@ function ViewMore() {
   document.getElementById("next-button").addEventListener("click", NextQ);
 
 
-
-    
-  
- 
-

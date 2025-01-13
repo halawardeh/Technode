@@ -4,15 +4,15 @@ let questionElement = document.getElementById("question");
 let options = document.getElementById("options");
 let nextBtn = document.getElementById("next-button");
 let counter = 0;
-let scourEng = 0;
+let scourIq = 0;
 let currentQuestion;
-let reviewDiv = document.getElementById("reviewDivEng");
-
+let reviewDiv = document.getElementById("reviewDiv");
 let selected;
-let answerEng = [];
+let answer = [];
 
 async function readTestData() {
-  let response = await fetch("english.json");
+  debugger;
+  let response = await fetch("../FirasIqTest/iqtest.json");
   questions = await response.json();
 
   currentQuestion = questions[counter];
@@ -39,7 +39,7 @@ function next() {
 }
 
 function NextBtn() {
-  answerEng.push(document.querySelector('input[name="option"]:checked').value);
+  answer.push(document.querySelector('input[name="option"]:checked').value);
 
   counter++;
 
@@ -47,7 +47,7 @@ function NextBtn() {
     currentQuestion.answer ==
     document.querySelector('input[name="option"]:checked').value
   ) {
-    scourEng++;
+    scourIq++;
   }
 
   console.log(
@@ -56,15 +56,14 @@ function NextBtn() {
   );
 
   console.log("The correct: " + currentQuestion.answer);
-  console.log("Your scour: " + scourEng);
+  console.log("Your scour: " + scourIq);
 
   if (counter > questions.length - 1) {
-    localStorage.setItem("answersEng", JSON.stringify(answerEng));
+    localStorage.setItem("answers2", JSON.stringify(answer));
+    localStorage.setItem("IqQuizTaken", true);
 
-localStorage.setItem('EngQuizTaken',true);
-
-    alert("Your finish You Exam.. ." + scourEng);
-    if (scourEng < 5) {
+    alert("Your finish You Exam.. ." + scourIq);
+    if (scourIq < 5) {
       card.style.backgroundColor = "rgb(255, 39, 39)";
       card.classList = "fail";
       card.innerHTML = "";
@@ -72,7 +71,7 @@ localStorage.setItem('EngQuizTaken',true);
                     <button class="close-button" id="closeButton" onclick='closeBtn()'>×</button>
 
             <h1>Better Luck next time!</h1><br<br><br>
-            <h3>Your answered ${scourEng} questions currect.</h3>
+            <h3>Your answered ${scourIq} questions currect.</h3>
 
                     <button onclick="reviewBtn()" id="reviewBtn" class="reviewBtn">Review Your Exam</button>
 
@@ -86,7 +85,7 @@ localStorage.setItem('EngQuizTaken',true);
               <button class="close-button" id="closeButton" onclick='closeBtn()'>×</button>
 
             <h1>Gongratulations!</h1><br<br><br>
-            <h3>Your answered ${scourEng} questions currectly.</h3>
+            <h3>Your answered ${scourIq} questions currectly.</h3>
 
                     <button onclick="reviewBtn()" id="reviewBtn" class="reviewBtn">Review Your Exam</button>
 
@@ -116,14 +115,15 @@ localStorage.setItem('EngQuizTaken',true);
 
 function closeBtn() {
   card.style.display = "none";
+  window.location.href = "../sampile/index4.html";
 }
 
 function reviewBtn() {
-  let answerss = JSON.parse(localStorage.getItem("answersEng"));
+  debugger;
+  let answerss = JSON.parse(localStorage.getItem("answers2"));
 
   for (let i = 0; i < answerss.length; i++) {
     selected = answerss[i];
-
     reviewDiv.innerHTML += `
   <p>Q${i + 1}.${questions[i].question}</p>
 
@@ -153,14 +153,10 @@ function reviewBtn() {
   }
 
   function getColor(option, index) {
-    console.log(selected);
-    const currentQuestion22 = questions[index];
-
-    if (selected == option && option == currentQuestion22.answer)
-      return "green";
-    else if (selected == option && selected != currentQuestion22.answer)
+    if (selected == option && option == questions[index].answer) return "green";
+    else if (selected == option && selected != questions[index].answer)
       return "red";
-    else if (option == currentQuestion22.answer) return "green";
+    else if (option == questions[index].answer) return "green";
     else return "black";
   }
 
@@ -168,6 +164,5 @@ function reviewBtn() {
 }
 
 function closeButtonReviewDiv() {
-  window.location.href="/Firas/mainCards/firasCards.html";
   reviewDiv.style.display = "none";
 }

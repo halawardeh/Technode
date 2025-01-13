@@ -5,7 +5,7 @@
       "option2": "gone",
       "option3": "went",
       "option4": "goed",
-      "answer": "went"
+      "correct": "went"
     },
     {
       "question": "Which pronoun refers to the speaker?",
@@ -13,7 +13,7 @@
       "option2": "He",
       "option3": "She",
       "option4": "I",
-      "answer": "I"
+      "correct": "I"
     },
     {
       "question": "What is the plural form of 'child'?",
@@ -21,7 +21,7 @@
       "option2": "childrens",
       "option3": "children",
       "option4": "childes",
-      "answer": "children"
+      "correct": "children"
     },
     {
       "question": "Which word is an adjective?",
@@ -29,7 +29,7 @@
       "option2": "Quickly",
       "option3": "Running",
       "option4": "Runner",
-      "answer": "Quickly"
+      "correct": "Quickly"
     },
     {
       "question": "What is the correct preposition to use in the sentence 'I live _____ London.'?",
@@ -37,7 +37,7 @@
       "option2": "at",
       "option3": "in",
       "option4": "to",
-      "answer": "in"
+      "correct": "in"
     },
     {
       "question": "Which sentence is grammatically correct?",
@@ -45,7 +45,7 @@
       "option2": "I went to the store.",
       "option3": "I goes to the store.",
       "option4": "Me go to the store.",
-      "answer": "I went to the store."
+      "correct": "I went to the store."
     },
     {
       "question": "What is the comparative form of 'good'?",
@@ -53,7 +53,7 @@
       "option2": "more good",
       "option3": "better",
       "option4": "most good",
-      "answer": "better"
+      "correct": "better"
     },
     {
       "question": "Which word is a verb?",
@@ -61,7 +61,7 @@
       "option2": "Beautiful",
       "option3": "Jump",
       "option4": "Slowly",
-      "answer": "Jump"
+      "correct": "Jump"
     },
     {
       "question": "What is the superlative form of 'big'?",
@@ -69,7 +69,7 @@
       "option2": "bigest",
       "option3": "biggest",
       "option4": "more big",
-      "answer": "biggest"
+      "correct": "biggest"
     },
     {
       "question": "Which sentence is an example of the present continuous tense?",
@@ -77,6 +77,6 @@
       "option2": "I am eating breakfast.",
       "option3": "I ate breakfast.",
       "option4": "I will eat breakfast.",
-      "answer": "I am eating breakfast."
+      "correct": "I am eating breakfast."
     }
   ]
