@@ -234,8 +234,8 @@ Save_Change.addEventListener('click', function (event) {
 
 window.onload = function () {
 
-    Main_Name.innerHTML = `${localStorage.getItem('Fname')} ${localStorage.getItem('Lname')}`;
-    Main_Email.innerHTML = `${localStorage.getItem('Email')}`;
+    Main_Name.innerHTML = `${localStorage.getItem('firstName')} ${localStorage.getItem('lastName')}`;
+    Main_Email.innerHTML = `${localStorage.getItem('email')}`;
 
     FName.value = localStorage.getItem('firstName');
     LName.value = localStorage.getItem('lastName');
