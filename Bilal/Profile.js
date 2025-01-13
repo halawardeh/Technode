@@ -24,7 +24,8 @@ let popupMenu = document.getElementById('Form');
 let IsValidName;
 
 
-
+let Main_Name = document.getElementById("Name");
+let Main_Email = document.getElementById("Email");
 
 function IsValid() {
 
@@ -177,6 +178,7 @@ Save_Change.addEventListener('click', function (event) {
     Password.value = Edit_Password.value;
 
 
+
     if (Edit_CPassword.value != Password.value) {
         window.alert('You must enter matching password');
         return;
@@ -198,6 +200,9 @@ Save_Change.addEventListener('click', function (event) {
         localStorage.setItem('Gender', "Female");
     }
 
+    Male.checked = true;
+    localStorage.setItem('Gender', "Male");
+
 
     if (IsValid() == false || IsValid2() == false || IsValid3() == false || IsValid4() == false || IsValid5() == false) {
         window.alert('There is an invalid field');
@@ -205,14 +210,15 @@ Save_Change.addEventListener('click', function (event) {
     } else {
         window.alert("Data has been saved successfully");
 
+        localStorage.setItem('firstName', Edit_FName.value);
+        localStorage.setItem('lastName', Edit_LName.value);
+        localStorage.setItem('email', Edit_Email.value);
+        localStorage.setItem('password', Edit_Password.value);
+        localStorage.setItem('city', Edit_City.value);
+        localStorage.setItem('birthDate', Edit_Date.value);
 
-
-        localStorage.setItem('Fname', Edit_FName.value);
-        localStorage.setItem('Lname', Edit_LName.value);
-        localStorage.setItem('Email', Edit_Email.value);
-        localStorage.setItem('Password', Edit_Password.value);
-        localStorage.setItem('City', Edit_City.value);
-        localStorage.setItem('Birth_Date', Edit_Date.value);
+        Main_Name.innerHTML = `${localStorage.getItem('firstName')} ${localStorage.getItem('lastName')}`;
+        Main_Email.innerHTML = `${localStorage.getItem('email')}`;
 
         popupMenu.style.display = "none";
         Overlay.style.display = "none";
@@ -225,14 +231,18 @@ Save_Change.addEventListener('click', function (event) {
 })
 
 
+
 window.onload = function () {
 
-    FName.value = localStorage.getItem('Fname');
-    LName.value = localStorage.getItem('Lname');
-    Email.value = localStorage.getItem('Email');
-    Password.value = localStorage.getItem('Password');
-    City.value = localStorage.getItem('City');
-    Birth_Date.value = localStorage.getItem('Birth_Date');
+    Main_Name.innerHTML = `${localStorage.getItem('Fname')} ${localStorage.getItem('Lname')}`;
+    Main_Email.innerHTML = `${localStorage.getItem('Email')}`;
+
+    FName.value = localStorage.getItem('firstName');
+    LName.value = localStorage.getItem('lastName');
+    Email.value = localStorage.getItem('email');
+    Password.value = localStorage.getItem('password');
+    City.value = localStorage.getItem('city');
+    Birth_Date.value = localStorage.getItem('birthDate');
 
     if (localStorage.getItem('Gender') == "Male") {
         Male.checked = true;
@@ -240,6 +250,8 @@ window.onload = function () {
     else {
         Female.checked = true;
     }
+
+    Male.checked = true;
 
 }
 
@@ -251,7 +263,9 @@ let Burger = document.getElementById("Burger_Menu");
 console.log(Burger);
 
 Burger.addEventListener('click', function () {
-   
+
     Nav.classList.toggle("navbarEdit");
 
 })
+
+
