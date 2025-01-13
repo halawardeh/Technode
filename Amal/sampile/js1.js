@@ -103,6 +103,14 @@ function ViewMore() {
       show.appendChild(result);
     });
   
+    let store={
+      userchoises:UserChoices,
+      question:quizData.map(question=>question.question),
+      correctanswer:quizData.map(question=>question.correct_answer)
+    };
+localStorage.setItem("REVIEW",JSON.stringify(store))
+
+
     show.style.display = "block"; // Show the 'detais' section
   }
  
