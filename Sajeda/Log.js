@@ -21,10 +21,6 @@ function login(event) {
 
   event.preventDefault();
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 07ef37c9e964f6343ed4594d189d46d975947218
   // let user = document.getElementById("username").value;
   // let checkuser = localStorage.getItem("username");
 
@@ -40,16 +36,12 @@ function login(event) {
 
   let Invalide = document.getElementById("fncheck");
 
-<<<<<<< HEAD
   if (( email === checkemail) && (userPassword === checkPassword)) {
     
     isLoggedIn = true;
     window.location.replace("home.html");
     
     
-=======
-  if (( email == checkemail) && (userPassword == checkPassword)) {
->>>>>>> 07ef37c9e964f6343ed4594d189d46d975947218
 
     sessionStorage.setItem("isLoggedIn", "true"); // Set login state
     window.location.replace("../Hala/index.html");
@@ -79,12 +71,8 @@ function signup(event) {
 
 
 
-<<<<<<< HEAD
 
 function signup(event){
-=======
-function signup(event) {
->>>>>>> 07ef37c9e964f6343ed4594d189d46d975947218
   event.preventDefault();
 
   let firstname = document.getElementById("firstName").value;
@@ -115,11 +103,8 @@ function signup(event) {
   let submit = document.getElementById("signbutton").value;
   localStorage.setItem("signbutton", submit);
 
-<<<<<<< HEAD
   window.alert("Thank you for registering with us");
  
-=======
->>>>>>> 07ef37c9e964f6343ed4594d189d46d975947218
 }
 
 
