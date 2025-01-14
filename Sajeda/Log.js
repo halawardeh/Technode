@@ -74,7 +74,7 @@ function signup(event) {
 
 function signup(event){
   event.preventDefault();
-
+debugger
   let firstname = document.getElementById("firstName").value;
   localStorage.setItem("firstName", firstname);
 
@@ -85,11 +85,11 @@ function signup(event){
   localStorage.setItem("birthDate", birthDate);
 
 
-  let password = document.getElementById("password").value;
-  localStorage.setItem("password", password);
+  let password1 = document.getElementById("password").value;
+  localStorage.setItem("password", password1);
 
-  let email = document.getElementById("email").value;
-  localStorage.setItem("email", email);
+  let email1 = document.getElementById("email").value;
+  localStorage.setItem("email", email1);
 
 
   let city = document.getElementById("city").value;
@@ -147,7 +147,8 @@ function lastnamevalidation() {
 
 function emailvalidation() {
 
-  let vemail = document.getElementById("email").value;
+  debugger
+  let vemail = document.getElementById("signup_email").value;
   let emailerror = document.getElementById("emailcheck");
   const regexemail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   if (!regexemail.test(vemail)) {
@@ -162,7 +163,8 @@ function emailvalidation() {
 
 
 function passwordvalidation() {
-  let vpassword = document.getElementById("password").value;
+  debugger
+  let vpassword = document.getElementById("signup_password").value;
   let passworderror = document.getElementById("passcheck");
 
   const regexpassword = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*.]).{8,}$/

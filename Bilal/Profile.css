@@ -663,9 +663,9 @@ input {
 
 .IsValid {
 
-    font-size: 8px;
+    font-size: 13px;
     color: red;
-    width: 12px;
+    width: 120px;
 }
 
 @media (min-width: 992px) {
