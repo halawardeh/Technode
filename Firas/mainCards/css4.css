@@ -60,6 +60,8 @@
   /* margin-left:1vw; */
   content: "10 questions to test logical reasoning ,10 questions on grammar and vocabulary ,15 questions on programming and technical knowledge.";
   font-size: 2vw;
+  text-align: center;
+  
 }
 
 .img1 {

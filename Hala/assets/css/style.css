@@ -596,6 +596,10 @@ h3 .dot {
   color: #fff;
   background-color: transparent;
   pointer-events: painted;
+  display: flex
+  ;
+      justify-content: center;
+      align-items: center;
 }
 
 .btn-search:focus~.input-search {
