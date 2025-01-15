@@ -135,3 +135,23 @@ function logoutBTN() {
   document.getElementById("logout-button").className = "nav_none";
   document.getElementById("profile-icon").className = "nav_none";
 }
+
+// function ayman(arr) {
+//   debugger
+//   for (let i = 0; i <= arr.length - 1; i++) {
+   
+//     arr[i]= (arr[i] <0) ? arr[i]*2: arr[i] * -1;
+
+   
+//     if (arr[i] < 0) {
+
+
+//       arr[i] = arr[i]*2;
+//     } else {
+//       arr[i] = arr[i] * -1;
+//     }
+//   }
+//   return arr;
+// }
+// let arr = [1, 2, -5];
+// console.log(ayman(arr));

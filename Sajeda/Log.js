@@ -12,10 +12,10 @@ loginbtn.addEventListener("click", () => {
 
 
 let isLoggedIn = false;
-if (  localStorage.getItem("isLoggedIn")) {
-  
-    isLoggedIn = true;
-  
+if (localStorage.getItem("isLoggedIn")) {
+
+  isLoggedIn = true;
+
 }
 function login(event) {
 
@@ -24,87 +24,68 @@ function login(event) {
   // let user = document.getElementById("username").value;
   // let checkuser = localStorage.getItem("username");
 
+
   let userPassword = document.getElementById("password").value;
+  let checkPassword = localStorage.getItem("signup_passwordLocalSign");
+
   console.log(userPassword);
-  
-  let checkPassword = localStorage.getItem("password");
 
   let email = document.getElementById("email").value;
-  let checkemail = localStorage.getItem("email");
+  let checkemail = localStorage.getItem("signup_emailLocalSign");
+
   console.log(email);
-  
 
-  let Invalide = document.getElementById("fncheck");
+  let Invalide = document.getElementById("fncheck11");
 
-  if (( email === checkemail) && (userPassword === checkPassword)) {
-    
+  if ((email === checkemail) && (userPassword === checkPassword)) {
+
     isLoggedIn = true;
-    window.location.replace("home.html");
-    
-    
+    // window.location.replace("home.html");
+    console.log("if true .....")
+
 
     sessionStorage.setItem("isLoggedIn", "true"); // Set login state
     window.location.replace("../Hala/index.html");
   } else {
     Invalide.innerHTML = "Invalid username or password";
+    console.log("else .....")
   }
 }
 
 
 function signup(event) {
   event.preventDefault();
-
-  let name = document.getElementById("username").value;
-  localStorage.setItem("username", name);
-
-  let email = document.getElementById("email").value;
-  localStorage.setItem("email", email);
-
-  let password = document.getElementById("password").value;
-  localStorage.setItem("password", password);
-
-
-  let submit = document.getElementById("signbutton").value;
-  localStorage.setItem("signbutton", submit);
-
-}
-
-
-
-
-function signup(event){
-  event.preventDefault();
-debugger
+  debugger
   let firstname = document.getElementById("firstName").value;
-  localStorage.setItem("firstName", firstname);
+  localStorage.setItem("firstNameLocalSignUp", firstname);
 
   let Lastname = document.getElementById("lastName").value;
-  localStorage.setItem("lastName", Lastname);
+  localStorage.setItem("lastNameLocalSignUp", Lastname);
 
   let birthDate = document.getElementById("birthDate").value;
-  localStorage.setItem("birthDate", birthDate);
+  localStorage.setItem("birthDateLocalSign", birthDate);
 
 
-  let password1 = document.getElementById("password").value;
-  localStorage.setItem("password", password1);
+  let password1 = document.getElementById("signup_password").value;
+  localStorage.setItem("signup_passwordLocalSign", password1);
 
-  let email1 = document.getElementById("email").value;
-  localStorage.setItem("email", email1);
+  let email1 = document.getElementById("signup_email").value;
+  localStorage.setItem("signup_emailLocalSign", email1);
 
 
   let city = document.getElementById("city").value;
-  localStorage.setItem("city", city);
+  localStorage.setItem("cityLocalSignUp", city);
 
 
   let Gender = document.getElementById("Gender").value;
-  localStorage.setItem("Gender", Gender);
+  localStorage.setItem("GenderLocalSignUp", Gender);
 
 
   let submit = document.getElementById("signbutton").value;
-  localStorage.setItem("signbutton", submit);
+  localStorage.setItem("signbuttonLocalSignUp", submit);
 
   window.alert("Thank you for registering with us");
- 
+
 }
 
 
@@ -179,7 +160,7 @@ function passwordvalidation() {
 
 
 function confirmpassword() {
-  let fpassword = document.getElementById("password").value;
+  let fpassword = document.getElementById("signup_password").value;
   let spassword = document.getElementById("cpassword").value;
   let confpass = document.getElementById("cpasscheck");
   confpass.innerHTML = ""
@@ -204,3 +185,21 @@ function bdatevalidation() {
 
 
 
+
+
+
+
+
+function isOddEven(num) {
+  debugger
+  if (num % 2 == 0) {
+    for (let i = 20; i <= 30; i++)
+      console.log(i);
+  }
+  else {
+    for (let i = 20; i >= 10; i--)
+      console.log(i);
+  }
+}
+
+isOddEven(5);

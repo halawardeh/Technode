@@ -68,12 +68,15 @@ window.onload = function () {
     document.getElementById("login-button").className = "nav_none";
     document.getElementById("logout-button").className = "nav_block";
     document.getElementById("profile-icon").className = "nav_block";
+    document.getElementById("apply_quizzes").className="nav_block";
 
   }
   else {
     document.getElementById("login-button").className = "nav_block";
     document.getElementById("logout-button").className = "nav_none";
     document.getElementById("profile-icon").className = "nav_none";
+    document.getElementById("quizzes-button").className="nav_none";
+    document.getElementById("apply_quizzes").disabled;
   }
 
 
@@ -91,6 +94,7 @@ function logoutBTN() {
   document.getElementById("login-button").className = "nav_block";
   document.getElementById("logout-button").className = "nav_none";
   document.getElementById("profile-icon").className = "nav_none";
+  document.getElementById("apply_quizzes").className="nav_block";
 }
 
 
